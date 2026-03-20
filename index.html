@@ -6,7 +6,7 @@
 <title>SnackSolution — Votre restaurant, encore plus rentable.</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
-:root{--black:#080808;--dark:#111111;--dark2:#181818;--dark3:#1f1f1f;--green:#22c55e;--green2:#4ade80;--white:#f4f8f4;--gray:#8a9a8a;--gray2:#2a332a;--red:#ef4444;}
+:root{--black:#080808;--dark:#111111;--dark2:#181818;--dark3:#1f1f1f;--green:#22c55e;--green2:#4ade80;--white:#f4f8f4;--gray:#8a9a8a;--gray2:#2a332a;--red:#ef4444;--orange:#eab308;--orange2:#facc15;--odark:rgba(234,179,8,.08);--oborder:rgba(234,179,8,.25);}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
@@ -241,6 +241,50 @@ footer{background:var(--dark);border-top:1px solid var(--gray2);padding:48px 5vw
 footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 
 /* REVEAL */
+
+/* ══ DISCOUNTMAX ══ */
+.dm-hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:125px 5vw 70px;position:relative;overflow:hidden;}
+.dm-glow{position:absolute;top:-10%;right:-5%;width:min(700px,88vw);height:min(700px,88vw);border-radius:50%;background:radial-gradient(circle,rgba(234,179,8,.13) 0%,transparent 60%);pointer-events:none;}
+.dm-glow2{position:absolute;bottom:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(234,179,8,.06) 0%,transparent 65%);pointer-events:none;}
+.dm-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(234,179,8,.1);border:1px solid rgba(234,179,8,.28);border-radius:100px;padding:5px 14px;font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;width:fit-content;margin-bottom:22px;animation:up .6s ease both;}
+.dm-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:blink 2s infinite;}
+.dm-h1 em{color:var(--orange);font-style:normal;}
+.dm-tag{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+.dm-badge{display:inline-block;padding:3px 11px;background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.28);border-radius:100px;font-size:.64rem;font-family:'Syne',sans-serif;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+.btn-dm{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;border:none;cursor:pointer;transition:all .22s;background:var(--orange);color:#000;}
+.btn-dm:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 12px 36px rgba(234,179,8,.3);}
+.dm-kpi .kpi-num{color:var(--orange);}
+.dm-card{background:var(--dark2);border:1px solid rgba(234,179,8,.15);border-radius:14px;padding:26px 22px;transition:border-color .25s,transform .25s;}
+.dm-card:hover{border-color:rgba(234,179,8,.4);transform:translateY(-3px);}
+.dm-card.star{border-color:rgba(234,179,8,.3);background:linear-gradient(135deg,rgba(234,179,8,.07),var(--dark2));}
+.dm-prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;}
+.dm-prod{background:var(--dark2);border:1px solid rgba(234,179,8,.12);border-radius:12px;padding:20px 14px;text-align:center;transition:border-color .25s,transform .2s;}
+.dm-prod:hover{border-color:rgba(234,179,8,.4);transform:translateY(-3px);}
+.dm-prod-ico{font-size:1.8rem;margin-bottom:10px;}
+.dm-prod h4{font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;margin-bottom:4px;}
+.dm-prod p{font-size:.74rem;color:var(--gray);font-weight:300;}
+.dm-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;background:var(--dark2);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.dm-flow-step{padding:24px 20px;text-align:center;}
+.dm-flow-step:nth-child(3){background:rgba(234,179,8,.07);border-left:1px solid rgba(234,179,8,.15);border-right:1px solid rgba(234,179,8,.15);}
+.dm-flow-arrow{font-size:1.2rem;color:var(--orange);opacity:.5;padding:0 8px;}
+.dm-flow-ico{font-size:1.6rem;margin-bottom:8px;}
+.dm-flow-t{font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;margin-bottom:3px;}
+.dm-flow-s{font-size:.74rem;color:var(--gray);font-weight:300;}
+.dm-flow-s.hot{color:var(--orange);font-weight:700;}
+.price-o{font-family:'Bebas Neue',sans-serif;font-size:4.8rem;color:var(--orange);line-height:1;}
+.dm-sep{border:none;border-top:1px solid rgba(234,179,8,.12);margin:60px 0 0;}
+
+/* Teaser DiscountMax dans page resto */
+.dm-teaser{background:linear-gradient(135deg,rgba(234,179,8,.06),var(--black));border-top:1px solid rgba(234,179,8,.12);padding:70px 5vw;text-align:center;}
+.dm-teaser h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.8vw,3.2rem);margin-bottom:12px;}
+.dm-teaser h2 span{color:var(--orange);}
+.dm-teaser p{color:var(--gray);font-size:.92rem;line-height:1.75;font-weight:300;max-width:520px;margin:0 auto 28px;}
+.dm-teaser-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;max-width:700px;margin:0 auto 32px;text-align:left;}
+.dtc{background:var(--dark2);border:1px solid rgba(234,179,8,.15);border-radius:11px;padding:18px 16px;}
+.dtc-ico{font-size:1.2rem;margin-bottom:8px;}
+.dtc h4{font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;margin-bottom:5px;}
+.dtc p{font-size:.76rem;color:var(--gray);line-height:1.5;font-weight:300;}
+
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
 .revealed{opacity:1;transform:translateY(0);}
 
@@ -272,6 +316,7 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
   <div class="nav-tabs">
     <button class="tab-btn on" onclick="show('resto')">🍽 Restaurateurs</button>
     <button class="tab-btn"   onclick="show('opp')">💼 Opportunité <span class="vbadge">VIP</span></button>
+    <button class="tab-btn"   onclick="show('dm')" style="color:#eab308;">📦 DiscountMax</button>
   </div>
 </nav>
 
@@ -440,6 +485,21 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
     <div class="gar-card reveal" style="border-color:rgba(34,197,94,.25);background:linear-gradient(135deg,rgba(34,197,94,.07),var(--dark));"><div class="gar-ico">📅</div><h3>30 jours d'essai — totalement gratuit</h3><p>Vous testez pendant un mois complet. Si vous n'êtes pas convaincu, on arrête. Sans pénalité, sans rien à payer.</p></div>
   </div>
 </section>
+
+
+<!-- TEASER DISCOUNTMAX -->
+<div class="dm-teaser">
+  <div style="display:inline-block;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:100px;padding:5px 16px;font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">Réduisez vos coûts</div>
+  <h2>Ce que vous achetez déjà.<br><span>Beaucoup moins cher.</span></h2>
+  <p>Coca-Cola, Red Bull, Oreo, emballages, produits d'hygiène… Achetez-les directement au prix usine, jusqu'à -40%. Même si vous n'utilisez pas notre système de commandes.</p>
+  <div class="dm-teaser-cards">
+    <div class="dtc"><div class="dtc-ico">🥤</div><h4>Boissons</h4><p>Coca, Fanta, Red Bull, 7UP, Oasis…</p></div>
+    <div class="dtc"><div class="dtc-ico">📦</div><h4>Emballages</h4><p>Boîtes, sacs, contenants livrés chez vous</p></div>
+    <div class="dtc"><div class="dtc-ico">🍪</div><h4>Alimentaire</h4><p>Oreo, Nutella, Barilla, sauces…</p></div>
+    <div class="dtc"><div class="dtc-ico">🧹</div><h4>Hygiène</h4><p>Produits d'entretien au tarif négocié</p></div>
+  </div>
+  <button class="btn-dm" onclick="show('dm')">Découvrir DiscountMax →</button>
+</div>
 
 <!-- TEASER OPPORTUNITÉ -->
 <div class="teaser-opp">
@@ -722,6 +782,130 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 </div><!-- /page-opp -->
 
 
+
+<!-- ═══════════════════════════════════════ -->
+<!--           PAGE DISCOUNTMAX             -->
+<!-- ═══════════════════════════════════════ -->
+<div id="page-dm" class="page">
+
+<!-- HERO -->
+<div class="dm-hero">
+  <div class="dm-glow"></div><div class="dm-glow2"></div>
+  <div class="dm-pill"><span class="dm-pill-dot"></span>Indépendant de votre système de livraison</div>
+  <h1 class="dm-h1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8.5vw,7.6rem);line-height:.9;margin-bottom:20px;animation:up .7s .1s ease both;">Ce que vous<br>achetez déjà.<br><em>-40%.</em><br>Sans intermédiaire.</h1>
+  <p class="hero-sub" style="animation:up .7s .2s ease both;">Coca-Cola, Red Bull, Oreo, emballages… Accédez directement aux prix usine, sans intermédiaire. Jusqu'à -40% sur vos achats du quotidien. Que vous soyez restaurateur, épicier ou gérant de snack.</p>
+  <div class="hero-ctas" style="animation:up .7s .3s ease both;">
+    <button class="btn-dm" onclick="goTo('dm-form')">Recevoir un devis gratuit →</button>
+    <button class="btn-o" onclick="goTo('dm-produits')">Voir les produits</button>
+  </div>
+  <div class="hero-kpis" style="border-top:1px solid rgba(234,179,8,.18);animation:up .7s .4s ease both;">
+    <div class="dm-kpi"><div class="kpi-num">-40%</div><div class="kpi-label">sur vos achats en moyenne</div></div>
+    <div class="dm-kpi"><div class="kpi-num">2 000+</div><div class="kpi-label">références disponibles</div></div>
+    <div class="dm-kpi"><div class="kpi-num">10-15j</div><div class="kpi-label">livraison directe chez vous</div></div>
+    <div class="dm-kpi"><div class="kpi-num">0€</div><div class="kpi-label">de frais de dossier</div></div>
+  </div>
+</div>
+
+<!-- PRODUITS -->
+<section class="bg-dark" id="dm-produits">
+  <div class="dm-tag">Ce qu'on propose</div>
+  <h2 class="s-title">Les produits que vous<br>achetez déjà… moins chers.</h2>
+  <p class="s-sub">Mêmes marques. Mêmes produits. Qualité 100% identique. Prix usine.</p>
+  <div class="dm-prod-grid reveal">
+    <div class="dm-prod"><div class="dm-prod-ico">🥤</div><h4>Coca-Cola</h4><p>Canettes &amp; bouteilles</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">⚡</div><h4>Red Bull</h4><p>Energy drinks</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">🍪</div><h4>Oreo</h4><p>Biscuits &amp; snacks</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">🍫</div><h4>Nutella</h4><p>Pâte à tartiner</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">🍝</div><h4>Barilla</h4><p>Pâtes &amp; sauces</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">📦</div><h4>Emballages</h4><p>Sacs, boîtes, contenants</p></div>
+    <div class="dm-prod"><div class="dm-prod-ico">🧹</div><h4>Hygiène</h4><p>Produits d'entretien</p></div>
+    <div class="dm-prod" style="border-color:rgba(234,179,8,.3);background:linear-gradient(135deg,rgba(234,179,8,.07),var(--dark2));"><div class="dm-prod-ico">➕</div><h4>Et bien plus</h4><p>+2 000 références</p></div>
+  </div>
+  <div style="text-align:center;margin-top:32px;">
+    <div style="display:inline-block;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:10px;padding:14px 28px;font-size:.86rem;color:var(--gray);line-height:1.6;">Produits officiels · Qualité garantie · Stock permanent · Import direct Europe (Pologne, Roumanie, Espagne…)</div>
+  </div>
+</section>
+
+<!-- POURQUOI MOINS CHER -->
+<section>
+  <div class="dm-tag">Le circuit court</div>
+  <h2 class="s-title">Pourquoi vous payez<br>trop cher aujourd'hui.</h2>
+  <p class="s-sub">Entre l'usine et votre restaurant, il y a en général 2 à 3 intermédiaires. Chacun prend sa marge. Vous payez tout ça.</p>
+  <div class="dm-flow reveal">
+    <div class="dm-flow-step"><div class="dm-flow-ico">🏭</div><div class="dm-flow-t">Usine</div><div class="dm-flow-s">Prix de base</div></div>
+    <div class="dm-flow-arrow">+30% →</div>
+    <div class="dm-flow-step"><div class="dm-flow-ico">🏬</div><div class="dm-flow-t">Grossiste</div><div class="dm-flow-s">+25% encore</div></div>
+    <div class="dm-flow-arrow">+25% →</div>
+    <div class="dm-flow-step" style="background:rgba(234,179,8,.07);"><div class="dm-flow-ico">😓</div><div class="dm-flow-t">Vous</div><div class="dm-flow-s hot">Prix final +75%</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="reveal">
+    <div style="background:linear-gradient(135deg,rgba(234,179,8,.08),var(--dark2));border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;">
+      <div style="font-size:1.4rem;flex-shrink:0;">✂️</div>
+      <div><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.92rem;margin-bottom:6px;">Notre modèle : direct usine → vous</div><div style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">On supprime les intermédiaires. Vous achetez au prix fabricant. C'est aussi simple que ça.</div></div>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(234,179,8,.08),var(--dark2));border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;">
+      <div style="font-size:1.4rem;flex-shrink:0;">💰</div>
+      <div><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.92rem;margin-bottom:6px;">Jusqu'à -40% sur chaque commande</div><div style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Sur 2 500€ d'achats mensuels, c'est jusqu'à 1 000€ d'économies. Chaque mois.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONDITIONS -->
+<section class="bg-dark">
+  <div class="dm-tag">Conditions</div>
+  <h2 class="s-title">Simple, rapide,<br>rentable.</h2>
+  <p class="s-sub">Pas de contrat compliqué. Pas d'abonnement. Vous commandez quand vous en avez besoin.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;" class="reveal">
+    <div class="dm-card star"><div style="font-size:1.4rem;margin-bottom:12px;">💶</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Minimum de commande</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">2 500€ HT par commande (hors livraison). Idéal pour les restaurants, épiceries et supérettes.</p></div>
+    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">🚚</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Livraison 10 à 15 jours</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Directement chez vous, depuis nos entrepôts européens. Livraison directe usine → client.</p></div>
+    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">💳</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Paiement flexible</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">1ère commande comptant. Les suivantes en 3x ou 4x. Pour gérer votre trésorerie sereinement.</p></div>
+    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">✅</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Qualité garantie</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Produits officiels, 100% authentiques. Mêmes références que chez votre grossiste habituel.</p></div>
+  </div>
+</section>
+
+<!-- FORMULAIRE -->
+<section id="dm-form">
+  <div class="form-wrap">
+    <div>
+      <div class="dm-tag">Demande de devis</div>
+      <h2 class="s-title">Un devis gratuit<br>sous 48 h.</h2>
+      <p class="s-sub" style="max-width:360px;">Dites-nous ce que vous achetez habituellement et en quelle quantité. On vous envoie une comparaison de prix et un devis sans engagement.</p>
+      <div class="form-aside">
+        <div class="aside-item"><div class="aside-ico">📊</div><div><h4>Comparaison de prix incluse</h4><p>On vous montre exactement ce que vous économisez par rapport à vos prix actuels.</p></div></div>
+        <div class="aside-item"><div class="aside-ico">🔓</div><div><h4>Aucun engagement</h4><p>Un devis, c'est juste un devis. Vous décidez ensuite librement.</p></div></div>
+        <div class="aside-item"><div class="aside-ico">🌍</div><div><h4>Ouvert à tous</h4><p>Restaurant, épicerie, supérette, snack — peu importe votre activité.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <form id="form-dm" action="https://formspree.io/f/xwvrykjr" method="POST" onsubmit="handleForm(event,'form-dm','success-dm')">
+        <input type="hidden" name="_subject" value="Demande devis DiscountMax">
+        <input type="hidden" name="type" value="discountmax">
+        <div class="form-row">
+          <div><label>Prénom *</label><input type="text" name="prenom" placeholder="Ahmed" required></div>
+          <div><label>Nom *</label><input type="text" name="nom" placeholder="Benali" required></div>
+        </div>
+        <div><label>Email *</label><input type="email" name="email" placeholder="votre@email.com" required></div>
+        <div><label>Téléphone</label><input type="tel" name="telephone" placeholder="+33 6 00 00 00 00"></div>
+        <div><label>Vous êtes</label>
+          <select name="profil">
+            <option value="">Sélectionnez...</option>
+            <option>Restaurateur / Snack</option>
+            <option>Épicerie / Supérette</option>
+            <option>Autre commerce alimentaire</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div><label>Produits qui vous intéressent</label><textarea name="produits" placeholder="Ex : canettes Coca, emballages, Oreo, Red Bull… et vos volumes approximatifs"></textarea></div>
+        <button type="submit" class="form-submit" style="background:var(--orange);color:#000;">Recevoir mon devis gratuit →</button>
+        <p class="form-legal">Vous acceptez d'être recontacté par DiscountMax sous 48 h. Aucun engagement.</p>
+      </form>
+      <div class="form-success" id="success-dm" style="border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.08);"><h3>✅ Demande reçue !</h3><p>On vous envoie votre comparaison de prix sous 48 h. À très vite.</p></div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-dm -->
+
 <footer>
   <div style="font-size:1rem;margin-bottom:9px;">⭐⭐⭐⭐⭐</div>
   <div class="footer-logo">Snack<span>Solution</span></div>
@@ -735,7 +919,8 @@ function show(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));
   document.getElementById('page-'+id).classList.add('on');
-  document.querySelectorAll('.tab-btn')[id==='resto'?0:1].classList.add('on');
+  const idx = id==='resto'?0:id==='opp'?1:2;
+  document.querySelectorAll('.tab-btn')[idx].classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
   setTimeout(observe,100);
 }
