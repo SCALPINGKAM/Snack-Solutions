@@ -8,15 +8,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 
-/* RESET GITHUB PAGES */
-*, *::before, *::after{box-sizing:border-box;}
-html, body{margin:0;padding:0;background:#080808 !important;color:#f4f8f4 !important;}
-a{color:inherit !important;text-decoration:none !important;}
-button{font-family:inherit;}
+/* GitHub Pages fix — HTML only, never SVG */
+html{background:#080808;}
+body{background:#080808;color:#f4f8f4;}
+a:not([class]){color:#f4f8f4;text-decoration:none;}
 :root{–black:#080808;–dark:#111111;–dark2:#181818;–dark3:#1f1f1f;–green:#22c55e;–green2:#4ade80;–white:#f4f8f4;–gray:#8a9a8a;–gray2:#2a332a;–red:#ef4444;–orange:#eab308;–orange2:#facc15;–odark:rgba(234,179,8,.08);–oborder:rgba(234,179,8,.25);}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:‘DM Sans’,sans-serif;background:#080808 !important;color:#f4f8f4 !important;overflow-x:hidden;}
+body{font-family:‘DM Sans’,sans-serif;background:#080808;color:#f4f8f4;overflow-x:hidden;}
 
 /* ANIMATIONS SCOOTER */
 @keyframes ride{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
@@ -39,13 +38,13 @@ body{font-family:‘DM Sans’,sans-serif;background:#080808 !important;color:#f
 @media(max-width:900px){.scooter-wrap{display:none;}}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:13px 5vw;background:rgba(8,8,8,.98) !important;backdrop-filter:blur(20px);border-bottom:1px solid rgba(34,197,94,.1);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:13px 5vw;background:rgba(8,8,8,.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(34,197,94,.1);}
 .logo{font-family:‘Bebas Neue’,sans-serif;font-size:1.65rem;letter-spacing:3px;color:var(–white);}
 .logo span{color:var(–green);}
 .nav-tabs{display:flex;gap:4px;background:rgba(255,255,255,.04);border:1px solid var(–gray2);border-radius:9px;padding:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:calc(100vw - 120px);}.nav-tabs::-webkit-scrollbar{display:none;}
 .tab-btn{padding:7px 13px;border-radius:6px;font-family:‘Syne’,sans-serif;font-weight:700;font-size:.75rem;letter-spacing:.2px;cursor:pointer;transition:all .22s;border:none;background:transparent;color:var(–gray);white-space:nowrap;}
-.tab-btn.on{background:#22c55e !important;color:#000 !important;font-weight:800;}
-.tab-btn{color:#8a9a8a !important;}.tab-btn.on{color:#000 !important;}.tab-btn:hover:not(.on){color:#f4f8f4 !important;}
+.tab-btn.on{background:#22c55e;color:#000;font-weight:800;}
+.tab-btn{color:#8a9a8a;}.tab-btn.on{background:#22c55e;color:#000;font-weight:800;}.tab-btn:hover:not(.on){color:#f4f8f4;}
 .vbadge{font-size:.6rem;background:var(–green);color:#000;border-radius:100px;padding:1px 6px;margin-left:3px;vertical-align:middle;}
 
 .page{display:none;}.page.on{display:block;}
@@ -62,17 +61,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 @media(max-width:900px){.hero h1{max-width:100%;}.hero-sub{max-width:100%;}}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;animation:up .7s .3s ease both;}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:8px;font-family:‘Syne’,sans-serif;font-weight:800;font-size:.88rem;text-decoration:none;border:none;cursor:pointer;transition:all .22s;}
-.btn-g{background:#22c55e !important;color:#000 !important;}
-.btn-g:hover{background:#4ade80 !important;color:#000 !important;transform:translateY(-2px);box-shadow:0 12px 36px rgba(34,197,94,.28);}
-.btn-o{background:transparent !important;color:#f4f8f4 !important;border:1px solid #2a332a !important;}
-.btn-o:hover{border-color:#22c55e !important;color:#22c55e !important;transform:translateY(-2px);}
+.btn-g{background:#22c55e;color:#000;}
+.btn-g:hover{background:#4ade80;color:#000;transform:translateY(-2px);box-shadow:0 12px 36px rgba(34,197,94,.28);}
+.btn-o{background:transparent;color:#f4f8f4;border:1px solid #2a332a;}
+.btn-o:hover{border-color:#22c55e;color:#22c55e;transform:translateY(-2px);}
 .hero-kpis{display:flex;gap:42px;margin-top:62px;flex-wrap:wrap;animation:up .7s .4s ease both;border-top:1px solid var(–gray2);padding-top:34px;}
 .kpi-num{font-family:‘Bebas Neue’,sans-serif;font-size:2.5rem;color:var(–green);line-height:1;}
 .kpi-label{font-size:.72rem;color:var(–gray);margin-top:4px;letter-spacing:.3px;}
 
 /* SECTIONS */
 section{padding:88px 5vw;position:relative;z-index:1;}
-.bg-dark{background:#111111 !important;}
+.bg-dark{background:#111111;}
 .s-tag{font-family:‘Syne’,sans-serif;font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(–green);margin-bottom:12px;}
 .s-title{font-family:‘Bebas Neue’,sans-serif;font-size:clamp(2.1rem,4.4vw,3.8rem);line-height:1;margin-bottom:16px;}
 .s-sub{color:var(–gray);font-size:.93rem;max-width:480px;line-height:1.75;font-weight:300;margin-bottom:52px;}
@@ -157,7 +156,7 @@ input:focus,textarea:focus,select:focus{border-color:rgba(34,197,94,.4);}
 input::placeholder,textarea::placeholder{color:rgba(138,154,138,.4);}
 select option{background:var(–dark2);}
 textarea{resize:vertical;min-height:105px;}
-.form-submit{background:#22c55e !important;color:#000 !important;border:none;border-radius:7px;padding:14px;width:100%;font-family:‘Syne’,sans-serif;font-weight:800;font-size:.94rem;cursor:pointer;transition:all .22s;margin-top:3px;}
+.form-submit{background:#22c55e;color:#000;border:none;border-radius:7px;padding:14px;width:100%;font-family:‘Syne’,sans-serif;font-weight:800;font-size:.94rem;cursor:pointer;transition:all .22s;margin-top:3px;}
 .form-submit:hover{background:var(–green2);transform:translateY(-2px);box-shadow:0 11px 32px rgba(34,197,94,.28);}
 .form-legal{font-size:.68rem;color:var(–gray);line-height:1.5;font-weight:300;margin-top:-3px;}
 .form-success{display:none;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:9px;padding:22px;text-align:center;}
@@ -280,6 +279,19 @@ footer p{color:var(–gray);font-size:.78rem;font-weight:300;}
 .dm-flow-s.hot{color:var(–orange);font-weight:700;}
 .price-o{font-family:‘Bebas Neue’,sans-serif;font-size:4.8rem;color:var(–orange);line-height:1;}
 .dm-sep{border:none;border-top:1px solid rgba(234,179,8,.12);margin:60px 0 0;}
+
+/* CADDIE ANIMATION */
+.cart-wrap{position:absolute;right:0;top:0;bottom:0;width:48%;display:flex;align-items:center;justify-content:center;pointer-events:none;overflow:hidden;}
+.cart-wrap svg{width:min(440px,80%);}
+@keyframes cart-roll{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@keyframes wheel-spin{to{transform:rotate(360deg);}}
+@keyframes product-bounce-1{0%,100%{transform:translateY(0) rotate(-8deg);}50%{transform:translateY(-5px) rotate(-8deg);}}
+@keyframes product-bounce-2{0%,100%{transform:translateY(0) rotate(5deg);}50%{transform:translateY(-7px) rotate(5deg);}}
+@keyframes product-bounce-3{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-4px) rotate(-3deg);}}
+@keyframes sparkle{0%,100%{opacity:0;transform:scale(0);}50%{opacity:1;transform:scale(1);}}
+@keyframes price-tag{0%,100%{transform:rotate(-12deg) scale(1);}50%{transform:rotate(-12deg) scale(1.08);}}
+@keyframes coin-shine{0%,100%{opacity:.5;}50%{opacity:1;}}
+@media(max-width:860px){.cart-wrap{display:none;}}
 
 /* Teaser DiscountMax dans page resto */
 .dm-teaser{background:linear-gradient(135deg,rgba(234,179,8,.06),var(–black));border-top:1px solid rgba(234,179,8,.12);padding:70px 5vw;text-align:center;}
@@ -821,8 +833,153 @@ nav{padding:10px 3vw;flex-wrap:wrap;gap:8px;}
 
 <div class="dm-hero">
   <div class="dm-glow"></div><div class="dm-glow2"></div>
+
+  <!-- CADDIE ANIMÉ -->
+
+  <div class="cart-wrap">
+    <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" fill="none">
+
+```
+  <!-- lueur derrière -->
+  <ellipse cx="210" cy="200" rx="160" ry="90" fill="#eab308" opacity=".05"/>
+
+  <!-- ombre au sol -->
+  <ellipse cx="215" cy="278" rx="100" ry="10" fill="#eab308" opacity=".08"/>
+
+  <!-- groupe principal qui se balance -->
+  <g style="transform-origin:210px 220px;animation:cart-roll 2s ease-in-out infinite;">
+
+    <!-- ── PRODUITS QUI DÉPASSENT DU CADDIE ── -->
+
+    <!-- Canette (Coca style) -->
+    <g style="transform-origin:155px 140px;animation:product-bounce-1 2s ease-in-out infinite;">
+      <rect x="140" y="110" width="30" height="52" rx="8" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
+      <rect x="140" y="118" width="30" height="28" rx="4" fill="#eab308" opacity=".15"/>
+      <rect x="144" y="122" width="22" height="3" rx="1.5" fill="#eab308" opacity=".6"/>
+      <rect x="144" y="128" width="16" height="2" rx="1" fill="#eab308" opacity=".4"/>
+      <ellipse cx="155" cy="113" rx="12" ry="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.2"/>
+      <rect x="152" y="108" width="6" height="5" rx="2" fill="#eab308" opacity=".7"/>
+    </g>
+
+    <!-- Paquet biscuits (Oreo style) -->
+    <g style="transform-origin:210px 125px;animation:product-bounce-2 2s ease-in-out infinite;animation-delay:.3s;">
+      <rect x="190" y="95" width="40" height="55" rx="6" fill="#111" stroke="#eab308" stroke-width="1.5"/>
+      <rect x="193" y="100" width="34" height="20" rx="3" fill="#eab308" opacity=".12"/>
+      <circle cx="210" cy="132" r="10" fill="#1a1a1a" stroke="#eab308" stroke-width="1"/>
+      <circle cx="210" cy="132" r="7" fill="none" stroke="#eab308" stroke-width=".8" opacity=".5"/>
+      <line x1="204" y1="132" x2="216" y2="132" stroke="#eab308" stroke-width=".8" opacity=".5"/>
+      <line x1="210" y1="126" x2="210" y2="138" stroke="#eab308" stroke-width=".8" opacity=".5"/>
+      <rect x="195" y="102" width="30" height="6" rx="2" fill="#eab308" opacity=".3"/>
+    </g>
+
+    <!-- Bouteille energy drink (Red Bull style) -->
+    <g style="transform-origin:263px 135px;animation:product-bounce-3 2s ease-in-out infinite;animation-delay:.6s;">
+      <rect x="250" y="100" width="26" height="60" rx="10" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
+      <rect x="253" y="108" width="20" height="30" rx="4" fill="#eab308" opacity=".1"/>
+      <path d="M253,120 L270,120" stroke="#eab308" stroke-width="1" opacity=".5"/>
+      <path d="M255,126 Q263,118 271,126" fill="#eab308" opacity=".4"/>
+      <ellipse cx="263" cy="102" rx="10" ry="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.2"/>
+    </g>
+
+    <!-- ── CADDIE ── -->
+    <!-- corps du caddie -->
+    <path d="M120,170 L130,240 L300,240 L310,170 Z" fill="#111" stroke="#eab308" stroke-width="2"/>
+    <!-- grille du caddie -->
+    <line x1="160" y1="170" x2="155" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <line x1="200" y1="170" x2="200" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <line x1="240" y1="170" x2="245" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <line x1="280" y1="170" x2="275" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <line x1="122" y1="190" x2="308" y2="190" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <line x1="125" y1="210" x2="305" y2="210" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+    <!-- bord supérieur du caddie -->
+    <rect x="118" y="164" width="194" height="10" rx="5" fill="#1a1a1a" stroke="#eab308" stroke-width="1.8"/>
+    <!-- poignée -->
+    <rect x="295" y="148" width="8" height="28" rx="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
+    <rect x="285" y="144" width="28" height="8" rx="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
+    <!-- bras support -->
+    <line x1="130" y1="240" x2="155" y2="265" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="300" y1="240" x2="275" y2="265" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- ── ROUES ── -->
+    <!-- roue gauche -->
+    <g transform="translate(155,270)">
+      <circle r="16" fill="#111" stroke="#eab308" stroke-width="1.8"/>
+      <circle r="10" fill="none" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+      <g style="transform-origin:0px 0px;animation:wheel-spin .6s linear infinite;">
+        <line x1="0" y1="-12" x2="0" y2="12" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
+        <line x1="-8" y1="-8" x2="8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+        <line x1="8" y1="-8" x2="-8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+      </g>
+      <circle r="4" fill="#eab308" opacity=".8"/>
+    </g>
+    <!-- roue droite -->
+    <g transform="translate(275,270)">
+      <circle r="16" fill="#111" stroke="#eab308" stroke-width="1.8"/>
+      <circle r="10" fill="none" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+      <g style="transform-origin:0px 0px;animation:wheel-spin .6s linear infinite;">
+        <line x1="0" y1="-12" x2="0" y2="12" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
+        <line x1="-12" y1="0" x2="12" y2="0" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
+        <line x1="-8" y1="-8" x2="8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+        <line x1="8" y1="-8" x2="-8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
+      </g>
+      <circle r="4" fill="#eab308" opacity=".8"/>
+    </g>
+
+  </g><!-- /cart-roll -->
+
+  <!-- ── BADGE -40% qui pulse ── -->
+  <g style="transform-origin:330px 80px;animation:price-tag 1.5s ease-in-out infinite;">
+    <rect x="295" y="55" width="80" height="46" rx="10" fill="#eab308"/>
+    <rect x="298" y="58" width="74" height="40" rx="8" fill="#eab308"/>
+    <text font-family="'Bebas Neue',Georgia,serif" font-size="28" font-weight="900" fill="#080808" x="335" y="86" text-anchor="middle">-40%</text>
+    <!-- petit triangle bas -->
+    <polygon points="325,101 345,101 335,112" fill="#eab308"/>
+  </g>
+
+  <!-- ── ÉTINCELLES / SPARKLES ── -->
+  <g style="animation:sparkle 2s ease-in-out infinite;transform-origin:90px 120px;">
+    <line x1="90" y1="110" x2="90" y2="100" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="90" y1="130" x2="90" y2="140" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="80" y1="120" x2="70" y2="120" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="100" y1="120" x2="110" y2="120" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g style="animation:sparkle 2.5s ease-in-out infinite;animation-delay:.8s;transform-origin:355px 200px;">
+    <line x1="355" y1="192" x2="355" y2="184" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+    <line x1="355" y1="208" x2="355" y2="216" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+    <line x1="347" y1="200" x2="339" y2="200" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+    <line x1="363" y1="200" x2="371" y2="200" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g style="animation:sparkle 3s ease-in-out infinite;animation-delay:1.4s;transform-origin:75px 220px;">
+    <line x1="75" y1="213" x2="75" y2="207" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+    <line x1="75" y1="227" x2="75" y2="233" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+    <line x1="68" y1="220" x2="62" y2="220" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+    <line x1="82" y1="220" x2="88" y2="220" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+  </g>
+
+  <!-- pièces qui tombent (doré) -->
+  <g style="animation:coin-fall-1 3.5s ease-in infinite;">
+    <ellipse cx="80" cy="40" rx="13" ry="13" fill="#111" stroke="#eab308" stroke-width="1.5" opacity=".8"/>
+    <text font-family="Georgia,serif" font-size="11" fill="#eab308" x="80" y="44" text-anchor="middle">€</text>
+  </g>
+  <g style="animation:coin-fall-2 5s ease-in infinite;animation-delay:1s;">
+    <ellipse cx="360" cy="30" rx="10" ry="10" fill="#111" stroke="#eab308" stroke-width="1.3" opacity=".7"/>
+    <text font-family="Georgia,serif" font-size="9" fill="#eab308" x="360" y="34" text-anchor="middle">€</text>
+  </g>
+  <g style="animation:coin-fall-3 4.5s ease-in infinite;animation-delay:2s;">
+    <ellipse cx="200" cy="20" rx="11" ry="11" fill="#111" stroke="#eab308" stroke-width="1.4" opacity=".75"/>
+    <text font-family="Georgia,serif" font-size="10" fill="#eab308" x="200" y="24" text-anchor="middle">€</text>
+  </g>
+
+  <!-- sol -->
+  <line x1="60" y1="288" x2="380" y2="288" stroke="#eab308" stroke-width="1" opacity=".1"/>
+
+</svg>
+```
+
+  </div>
   <div class="dm-pill"><span class="dm-pill-dot"></span>Indépendant de votre système de livraison</div>
-  <h1 class="dm-h1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8.5vw,7.6rem);line-height:.9;margin-bottom:20px;animation:up .7s .1s ease both;">Ce que vous<br>achetez déjà.<br><em>-40%.</em><br>Sans intermédiaire.</h1>
+  <h1 class="dm-h1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(3.4rem,8.5vw,7.6rem);line-height:.9;margin-bottom:20px;animation:up .7s .1s ease both;max-width:50%;">Ce que vous<br>achetez déjà.<br><em>-40%.</em><br>Sans intermédiaire.</h1>
   <p class="hero-sub" style="animation:up .7s .2s ease both;">Coca-Cola, Red Bull, Oreo, emballages… Accédez directement aux prix usine, sans intermédiaire. Jusqu'à -40% sur vos achats du quotidien. Que vous soyez restaurateur, épicier ou gérant de snack.</p>
   <div class="hero-ctas" style="animation:up .7s .3s ease both;">
     <button class="btn-dm" onclick="goTo('dm-form')">Recevoir un devis gratuit →</button>
@@ -930,7 +1087,7 @@ nav{padding:10px 3vw;flex-wrap:wrap;gap:8px;}
           </select>
         </div>
         <div><label>Produits qui vous intéressent</label><textarea name="produits" placeholder="Ex : canettes Coca, emballages, Oreo, Red Bull… et vos volumes approximatifs"></textarea></div>
-        <button type="submit" class="form-submit" style="background:#eab308 !important;color:#000 !important;width:100%;margin-top:3px;">Recevoir mon devis gratuit →</button>
+        <button type="submit" class="form-submit" style="background:#eab308;color:#000;">Recevoir mon devis gratuit →</button>
         <p class="form-legal">Vous acceptez d'être recontacté par DiscountMax sous 48 h. Aucun engagement.</p>
       </form>
       <div class="form-success" id="success-dm" style="border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.08);"><h3>✅ Demande reçue !</h3><p>On vous envoie votre comparaison de prix sous 48 h. À très vite.</p></div>
