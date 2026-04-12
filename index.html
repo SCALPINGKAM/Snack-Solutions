@@ -11,7 +11,6 @@
 html{background:#080808;}
 body{background:#080808;color:#f4f8f4;}
 a:not([class]){color:#f4f8f4;text-decoration:none;}
-:root{--black:#080808;--dark:#111111;--dark2:#181818;--dark3:#1f1f1f;--green:#22c55e;--green2:#4ade80;--white:#f4f8f4;--gray:#8a9a8a;--gray2:#2a332a;--red:#ef4444;--orange:#eab308;--orange2:#facc15;--odark:rgba(234,179,8,.08);--oborder:rgba(234,179,8,.25);}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:#080808;color:#f4f8f4;overflow-x:hidden;}
@@ -37,7 +36,7 @@ body{font-family:'DM Sans',sans-serif;background:#080808;color:#f4f8f4;overflow-
 @media(max-width:900px){.scooter-wrap{display:none;}}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:13px 5vw;background:rgba(8,8,8,.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(34,197,94,.1);}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:13px 5vw;background:rgba(8,8,8,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(34,197,94,.1);}
 .logo{font-family:'Bebas Neue',sans-serif;font-size:1.65rem;letter-spacing:3px;color:var(--white);}
 .logo span{color:var(--green);}
 .nav-tabs{display:flex;gap:4px;background:rgba(255,255,255,.04);border:1px solid var(--gray2);border-radius:9px;padding:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:calc(100vw - 120px);}.nav-tabs::-webkit-scrollbar{display:none;}
@@ -50,8 +49,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 
 /* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:125px 5vw 70px;position:relative;overflow:hidden;}
-.hero-glow{position:absolute;top:-10%;right:-5%;width:min(720px,88vw);height:min(720px,88vw);border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.13) 0%,transparent 60%);pointer-events:none;}
-.hero-glow2{position:absolute;bottom:-20%;left:-10%;width:440px;height:440px;background:radial-gradient(circle,rgba(34,197,94,.06) 0%,transparent 65%);pointer-events:none;}
+.hero-glow{position:absolute;top:-10%;right:-5%;width:min(720px,88vw);height:min(720px,88vw);border-radius:50%;background:radial-gradient(circle,rgba(34,197,94,.28) 0%,transparent 60%);pointer-events:none;}
+.hero-glow2{position:absolute;bottom:-20%;left:-10%;width:440px;height:440px;background:radial-gradient(circle,rgba(34,197,94,.14) 0%,transparent 65%);pointer-events:none;}
 .pill{display:inline-flex;align-items:center;gap:7px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);border-radius:100px;padding:5px 14px;font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;width:fit-content;margin-bottom:22px;animation:up .6s ease both;}
 .pill-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s infinite;}
 .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,2.8vw,3rem);line-height:1.1;letter-spacing:.5px;margin-bottom:20px;animation:up .7s .1s ease both;max-width:50%;}
@@ -69,8 +68,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .kpi-label{font-size:.72rem;color:var(--gray);margin-top:4px;letter-spacing:.3px;}
 
 /* SECTIONS */
-section{padding:88px 5vw;position:relative;z-index:1;}
+section{padding:88px 5vw;position:relative;z-index:1;background:#080808;}
 .bg-dark{background:#111111;}
+.bgd{background:#111111;}
 .s-tag{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:12px;}
 .s-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.1rem,4.4vw,3.8rem);line-height:1;margin-bottom:16px;}
 .s-sub{color:var(--gray);font-size:.93rem;max-width:480px;line-height:1.75;font-weight:300;margin-bottom:52px;}
@@ -90,7 +90,7 @@ section{padding:88px 5vw;position:relative;z-index:1;}
 
 /* SOLUTION GRID */
 .sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:17px;}
-.sol-card{background:var(--dark);border:1px solid var(--gray2);border-radius:14px;padding:30px 24px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;}
+.sol-card{background:#111111;border:1px solid var(--gray2);border-radius:14px;padding:30px 24px;position:relative;overflow:hidden;transition:border-color .25s,transform .25s;}
 .sol-card:hover{border-color:rgba(34,197,94,.35);transform:translateY(-3px);}
 .sol-card.star{border-color:rgba(34,197,94,.25);background:linear-gradient(135deg,rgba(34,197,94,.07),var(--dark));}
 .sol-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:rgba(34,197,94,.12);position:absolute;top:8px;right:18px;line-height:1;}
@@ -102,7 +102,7 @@ section{padding:88px 5vw;position:relative;z-index:1;}
 
 /* STEPS */
 .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;border-radius:14px;overflow:hidden;}
-.step-card{background:var(--dark2);padding:30px 22px;}
+.step-card{background:#181818;padding:30px 22px;}
 .step-circle{width:41px;height:41px;border-radius:50%;background:var(--green);color:#000;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;display:flex;align-items:center;justify-content:center;margin-bottom:15px;}
 .step-time{font-family:'Syne',sans-serif;font-size:.66rem;font-weight:700;color:var(--green);letter-spacing:1px;margin-bottom:7px;}
 .step-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:.9rem;margin-bottom:8px;}
@@ -119,14 +119,14 @@ section{padding:88px 5vw;position:relative;z-index:1;}
 
 /* PRICING */
 .price-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2px;max-width:800px;border-radius:14px;overflow:hidden;}
-.price-left{background:var(--dark2);padding:48px 38px;text-align:center;}
+.price-left{background:#181818;padding:48px 38px;text-align:center;}
 .price-from{font-size:.78rem;color:var(--gray);margin-bottom:5px;}
 .price-big{font-family:'Bebas Neue',sans-serif;font-size:4.9rem;color:var(--green);line-height:1;}
 .price-unit{font-family:'Syne',sans-serif;font-weight:700;font-size:.86rem;margin-top:7px;}
 .price-rows{margin-top:26px;display:flex;flex-direction:column;gap:5px;text-align:left;}
 .p-row{display:flex;justify-content:space-between;font-size:.78rem;padding:7px 11px;border-radius:5px;background:rgba(255,255,255,.03);}
 .p-row b{font-family:'Syne',sans-serif;font-weight:700;color:var(--green);}
-.price-right{background:linear-gradient(160deg,rgba(34,197,94,.1),#141414);padding:48px 38px;display:flex;flex-direction:column;justify-content:center;gap:20px;}
+.price-right{background:linear-gradient(160deg,rgba(34,197,94,.12),#101010);padding:48px 38px;display:flex;flex-direction:column;justify-content:center;gap:20px;}
 .pf{display:flex;align-items:flex-start;gap:13px;}
 .pf-ico{width:34px;height:34px;border-radius:7px;background:rgba(34,197,94,.14);display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
 .pf h4{font-family:'Syne',sans-serif;font-weight:700;font-size:.84rem;margin-bottom:3px;}
@@ -134,7 +134,7 @@ section{padding:88px 5vw;position:relative;z-index:1;}
 
 /* GARANTIES */
 .gar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:16px;}
-.gar-card{background:var(--dark);border:1px solid var(--gray2);border-radius:11px;padding:26px 19px;text-align:center;transition:border-color .25s;}
+.gar-card{background:#111111;border:1px solid var(--gray2);border-radius:11px;padding:26px 19px;text-align:center;transition:border-color .25s;}
 .gar-card:hover{border-color:rgba(34,197,94,.3);}
 .gar-ico{font-size:1.6rem;margin-bottom:12px;}
 .gar-card h3{font-family:'Syne',sans-serif;font-weight:800;font-size:.84rem;margin-bottom:7px;}
@@ -230,9 +230,6 @@ textarea{resize:vertical;min-height:105px;}
 .c-box{width:15px;height:15px;border-radius:4px;border:1.5px solid rgba(34,197,94,.4);background:rgba(34,197,94,.08);flex-shrink:0;}
 
 /* TEASER OPPORTUNITÉ (bas page restaurateur) */
-.teaser-opp{background:linear-gradient(180deg,var(--dark) 0%,var(--black) 100%);padding:80px 5vw;text-align:center;}
-.teaser-opp h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.8vw,3.2rem);margin-bottom:14px;}
-.teaser-opp p{color:var(--gray);font-size:.93rem;line-height:1.75;font-weight:300;max-width:520px;margin:0 auto 28px;}
 .teaser-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;max-width:720px;margin:0 auto 36px;text-align:left;}
 .tc{background:var(--dark2);border:1px solid var(--gray2);border-radius:12px;padding:22px 20px;}
 .tc-ico{font-size:1.3rem;margin-bottom:11px;}
@@ -248,61 +245,12 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 /* REVEAL */
 
 /* ══ DISCOUNTMAX ══ */
-.dm-hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:125px 5vw 70px;position:relative;overflow:hidden;}
-.dm-glow{position:absolute;top:-10%;right:-5%;width:min(700px,88vw);height:min(700px,88vw);border-radius:50%;background:radial-gradient(circle,rgba(234,179,8,.22) 0%,transparent 60%);pointer-events:none;}
-.dm-glow2{position:absolute;bottom:-20%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(234,179,8,.06) 0%,transparent 65%);pointer-events:none;}
-.dm-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(234,179,8,.1);border:1px solid rgba(234,179,8,.28);border-radius:100px;padding:5px 14px;font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;width:fit-content;margin-bottom:22px;animation:up .6s ease both;}
-.dm-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:blink 2s infinite;}
-.dm-h1 em{color:var(--orange);font-style:normal;}
-.dm-tag{font-family:'Syne',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
-.dm-badge{display:inline-block;padding:3px 11px;background:rgba(234,179,8,.12);border:1px solid rgba(234,179,8,.28);border-radius:100px;font-size:.64rem;font-family:'Syne',sans-serif;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
-.btn-dm{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;border:none;cursor:pointer;transition:all .22s;background:var(--orange);color:#000;}
-.btn-dm:hover{background:var(--orange2);transform:translateY(-2px);box-shadow:0 12px 36px rgba(234,179,8,.3);}
-.dm-kpi .kpi-num{color:var(--orange);}
-.dm-card{background:var(--dark2);border:1px solid rgba(234,179,8,.15);border-radius:14px;padding:26px 22px;transition:border-color .25s,transform .25s;}
-.dm-card:hover{border-color:rgba(234,179,8,.4);transform:translateY(-3px);}
-.dm-card.star{border-color:rgba(234,179,8,.3);background:linear-gradient(135deg,rgba(234,179,8,.07),var(--dark2));}
-.dm-prod-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;}
-.dm-prod{background:var(--dark2);border:1px solid rgba(234,179,8,.12);border-radius:12px;padding:20px 14px;text-align:center;transition:border-color .25s,transform .2s;}
-.dm-prod:hover{border-color:rgba(234,179,8,.4);transform:translateY(-3px);}
-.dm-prod-ico{font-size:1.8rem;margin-bottom:10px;}
-.dm-prod h4{font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;margin-bottom:4px;}
-.dm-prod p{font-size:.74rem;color:var(--gray);font-weight:300;}
-.dm-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;background:var(--dark2);border-radius:14px;overflow:hidden;margin-bottom:20px;}
-.dm-flow-step{padding:24px 20px;text-align:center;}
-.dm-flow-step:nth-child(3){background:rgba(234,179,8,.07);border-left:1px solid rgba(234,179,8,.15);border-right:1px solid rgba(234,179,8,.15);}
-.dm-flow-arrow{font-size:1.2rem;color:var(--orange);opacity:.5;padding:0 8px;}
-.dm-flow-ico{font-size:1.6rem;margin-bottom:8px;}
-.dm-flow-t{font-family:'Syne',sans-serif;font-weight:800;font-size:.88rem;margin-bottom:3px;}
-.dm-flow-s{font-size:.74rem;color:var(--gray);font-weight:300;}
-.dm-flow-s.hot{color:var(--orange);font-weight:700;}
-.price-o{font-family:'Bebas Neue',sans-serif;font-size:4.8rem;color:var(--orange);line-height:1;}
-.dm-sep{border:none;border-top:1px solid rgba(234,179,8,.12);margin:60px 0 0;}
 
 
 /* CADDIE ANIMATION */
-.cart-wrap{position:absolute;right:0;top:0;bottom:0;width:48%;display:flex;align-items:center;justify-content:center;pointer-events:none;overflow:hidden;}
-.cart-wrap svg{width:min(440px,80%);}
-@keyframes cart-roll{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
-@keyframes wheel-spin{to{transform:rotate(360deg);}}
-@keyframes product-bounce-1{0%,100%{transform:translateY(0) rotate(-8deg);}50%{transform:translateY(-5px) rotate(-8deg);}}
-@keyframes product-bounce-2{0%,100%{transform:translateY(0) rotate(5deg);}50%{transform:translateY(-7px) rotate(5deg);}}
-@keyframes product-bounce-3{0%,100%{transform:translateY(0) rotate(-3deg);}50%{transform:translateY(-4px) rotate(-3deg);}}
 @keyframes sparkle{0%,100%{opacity:0;transform:scale(0);}50%{opacity:1;transform:scale(1);}}
-@keyframes price-tag{0%,100%{transform:rotate(-12deg) scale(1);}50%{transform:rotate(-12deg) scale(1.08);}}
-@keyframes coin-shine{0%,100%{opacity:.5;}50%{opacity:1;}}
-@media(max-width:860px){.cart-wrap{display:none;}}
 
 /* Teaser DiscountMax dans page resto */
-.dm-teaser{background:linear-gradient(135deg,rgba(234,179,8,.06),var(--black));border-top:1px solid rgba(234,179,8,.12);padding:70px 5vw;text-align:center;}
-.dm-teaser h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,3.8vw,3.2rem);margin-bottom:12px;}
-.dm-teaser h2 span{color:var(--orange);}
-.dm-teaser p{color:var(--gray);font-size:.92rem;line-height:1.75;font-weight:300;max-width:520px;margin:0 auto 28px;}
-.dm-teaser-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;max-width:700px;margin:0 auto 32px;text-align:left;}
-.dtc{background:var(--dark2);border:1px solid rgba(234,179,8,.15);border-radius:11px;padding:18px 16px;}
-.dtc-ico{font-size:1.2rem;margin-bottom:8px;}
-.dtc h4{font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;margin-bottom:5px;}
-.dtc p{font-size:.76rem;color:var(--gray);line-height:1.5;font-weight:300;}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;}
 .revealed{opacity:1;transform:translateY(0);}
@@ -361,8 +309,6 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
   </div>
   <div class="nav-tabs">
     <button class="tab-btn on" onclick="show('resto')">🍽 Restaurateurs</button>
-    <button class="tab-btn"   onclick="show('opp')">💼 Opportunité <span class="vbadge">VIP</span></button>
-    <button class="tab-btn"   onclick="show('dm')" style="color:#eab308;">🛒 Vos stocks à -40%</button>
   </div>
 </nav>
 
@@ -372,7 +318,7 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 <!-- ═══════════════════════════════════════ -->
 <div id="page-resto" class="page on">
 
-<div class="hero">
+<div class="hero" style="background:linear-gradient(135deg,#0a0f0a 0%,#080808 50%,#0a120a 100%);">
   <div class="hero-glow"></div><div class="hero-glow2"></div>
 
   <div class="scooter-wrap">
@@ -473,6 +419,67 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
   </div>
 </section>
 
+
+<!-- SECTION ARGUMENT CLÉ : COMMISSION RÉDUITE -->
+<section style="background:linear-gradient(135deg,rgba(34,197,94,.05),var(--dark));">
+  <div class="stag">Pourquoi ça change tout</div>
+  <h2 class="s-title">Sur une commande à 20€,<br>vous gardez <em style="color:var(--green);font-style:normal;">4€ de plus.</em></h2>
+  <p class="s-sub">Concrètement, voici ce que ça change pour votre restaurant :</p>
+
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:40px;" class="reveal">
+
+    <!-- Uber Eats classique -->
+    <div style="background:var(--dark2);border:1px solid rgba(239,68,68,.25);border-radius:14px;padding:28px 24px;">
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.78rem;color:#ef4444;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Uber Eats classique</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#f4f8f4;line-height:1;margin-bottom:6px;">20€</div>
+      <div style="font-size:.8rem;color:var(--gray);margin-bottom:16px;font-weight:300;">commande client</div>
+      <div style="background:rgba(239,68,68,.08);border-radius:8px;padding:12px 14px;margin-bottom:8px;">
+        <div style="font-size:.78rem;color:#ef4444;font-family:'Syne',sans-serif;font-weight:700;">Uber prend 30–35%</div>
+        <div style="font-size:.75rem;color:var(--gray);font-weight:300;margin-top:2px;">≈ 6 à 7€ prélevés</div>
+      </div>
+      <div style="text-align:center;margin-top:16px;">
+        <div style="font-size:.72rem;color:var(--gray);font-weight:300;margin-bottom:4px;">Il vous reste</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#ef4444;line-height:1;">~13–14€</div>
+      </div>
+    </div>
+
+    <!-- VS -->
+    <div style="text-align:center;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gray);line-height:1;">VS</div>
+    </div>
+
+    <!-- Avec SnackSolution -->
+    <div style="background:linear-gradient(135deg,rgba(34,197,94,.1),var(--dark2));border:1px solid rgba(34,197,94,.35);border-radius:14px;padding:28px 24px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:10px;right:12px;background:var(--green);color:#000;font-family:'Syne',sans-serif;font-weight:800;font-size:.65rem;padding:3px 10px;border-radius:100px;">+4€ PAR COMMANDE</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.78rem;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Avec SnackSolution</div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:3rem;color:#f4f8f4;line-height:1;margin-bottom:6px;">20€</div>
+      <div style="font-size:.8rem;color:var(--gray);margin-bottom:16px;font-weight:300;">commande client</div>
+      <div style="background:rgba(34,197,94,.08);border-radius:8px;padding:12px 14px;margin-bottom:8px;">
+        <div style="font-size:.78rem;color:var(--green);font-family:'Syne',sans-serif;font-weight:700;">Uber ne prend que ~10%</div>
+        <div style="font-size:.75rem;color:var(--gray);font-weight:300;margin-top:2px;">≈ 2€ prélevés</div>
+      </div>
+      <div style="background:rgba(34,197,94,.06);border-radius:8px;padding:12px 14px;margin-bottom:10px;">
+        <div style="font-size:.78rem;color:var(--green);font-family:'Syne',sans-serif;font-weight:700;">SnackSolution prend 0,75€</div>
+        <div style="font-size:.75rem;color:var(--gray);font-weight:300;margin-top:2px;">par commande générée</div>
+      </div>
+      <div style="text-align:center;margin-top:6px;">
+        <div style="font-size:.72rem;color:var(--gray);font-weight:300;margin-bottom:4px;">Il vous reste</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:var(--green);line-height:1;">~17–18€</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ligne de conclusion -->
+  <div style="background:rgba(34,197,94,.07);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:22px 28px;display:flex;align-items:center;gap:20px;" class="reveal">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--green);line-height:1;flex-shrink:0;">+4€</div>
+    <div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;margin-bottom:6px;">Par commande. Sans rien changer à votre cuisine.</div>
+      <div style="font-size:.88rem;color:var(--gray);line-height:1.65;font-weight:300;">Sur 500 commandes par mois, c'est <strong style="color:var(--white);font-weight:600;">+2 000€ nets</strong> que vous n'aviez pas avant. Et c'est gratuit pour démarrer.</div>
+    </div>
+  </div>
+</section>
+
 <section id="leviers">
   <div class="s-tag">L'offre</div>
   <h2 class="s-title">100 % gratuit pour démarrer.<br>Des options pour aller plus loin.</h2>
@@ -534,31 +541,10 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 
 
 <!-- TEASER DISCOUNTMAX -->
-<div class="dm-teaser">
-  <div style="display:inline-block;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:100px;padding:5px 16px;font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;color:var(--orange);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">Réduisez vos coûts</div>
-  <h2>Ce que vous achetez déjà.<br><span>Beaucoup moins cher.</span></h2>
-  <p>Coca-Cola, Red Bull, Oreo, emballages, produits d'hygiène… Achetez-les directement au prix usine, jusqu'à -40%. Même si vous n'utilisez pas notre système de commandes.</p>
-  <div class="dm-teaser-cards">
-    <div class="dtc"><div class="dtc-ico">🥤</div><h4>Boissons</h4><p>Coca, Fanta, Red Bull, 7UP, Oasis…</p></div>
-    <div class="dtc"><div class="dtc-ico">📦</div><h4>Emballages</h4><p>Boîtes, sacs, contenants livrés chez vous</p></div>
-    <div class="dtc"><div class="dtc-ico">🍪</div><h4>Alimentaire</h4><p>Oreo, Nutella, Barilla, sauces…</p></div>
-    <div class="dtc"><div class="dtc-ico">🧹</div><h4>Hygiène</h4><p>Produits d'entretien au tarif négocié</p></div>
-  </div>
-  <button class="btn-dm" onclick="show('dm')">Découvrir DiscountMax →</button>
-</div>
+
 
 <!-- TEASER OPPORTUNITÉ -->
-<div class="teaser-opp">
-  <div style="display:inline-block;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.18);border-radius:100px;padding:5px 16px;font-family:'Syne',sans-serif;font-size:.68rem;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;">Et si on allait plus loin ?</div>
-  <h2>Vous avez des amis<br>dans la restauration ?</h2>
-  <p>Beaucoup de nos partenaires ont simplement parlé de SnackSolution à un ami gérant — et ont découvert qu'en faisant cette mise en relation, <strong style="color:var(--white);font-weight:500;">ils touchaient eux aussi un revenu mensuel</strong>, sans quitter leur activité.</p>
-  <div class="teaser-cards">
-    <div class="tc"><div class="tc-ico">👥</div><h4>Vous connaissez un gérant</h4><p>Un ami, un cousin, un voisin qui tient un kebab ou une pizzeria. Vous lui en parlez.</p></div>
-    <div class="tc"><div class="tc-ico">🤝</div><h4>On s'occupe du reste</h4><p>Mise en place, technique, optimisation — votre rôle s'arrête à la mise en relation.</p></div>
-    <div class="tc" style="border-color:rgba(34,197,94,.22);background:linear-gradient(135deg,rgba(34,197,94,.07),var(--dark2));"><div class="tc-ico">💰</div><h4>Vous touchez une part chaque mois</h4><p>Sur chaque commande générée par le restaurant. Tant qu'il reste actif.</p></div>
-  </div>
-  <button class="btn btn-o" onclick="show('opp')" style="margin:0 auto;">Découvrir comment ça marche →</button>
-</div>
+
 
 <section class="bg-dark" id="form-resto">
   <div class="form-wrap">
@@ -604,494 +590,14 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 <!-- ═══════════════════════════════════════ -->
 <!--          PAGE OPPORTUNITÉ              -->
 <!-- ═══════════════════════════════════════ -->
-<div id="page-opp" class="page">
 
-<div class="hero" style="background:linear-gradient(135deg,#0d0d0d 0%,#080e08 60%,#0a0a0a 100%);position:relative;overflow:hidden;">
-  <div class="opp-glow"></div>
-
-  <!-- OPP ILLUSTRATION : réseau + pièces -->
-  <div class="opp-illustration">
-    <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" fill="none">
-
-      <!-- ── RÉSEAU DE NŒUDS (croissance, connexions) ── -->
-      <!-- liens entre nœuds -->
-      <line x1="210" y1="155" x2="120" y2="100" stroke="#22c55e" stroke-width="1" opacity=".2" stroke-dasharray="200" stroke-dashoffset="0">
-        <animate attributeName="opacity" values=".1;.35;.1" dur="3.5s" repeatCount="indefinite"/>
-      </line>
-      <line x1="210" y1="155" x2="300" y2="100" stroke="#22c55e" stroke-width="1" opacity=".2" stroke-dasharray="200" stroke-dashoffset="0">
-        <animate attributeName="opacity" values=".1;.3;.1" dur="4s" begin=".5s" repeatCount="indefinite"/>
-      </line>
-      <line x1="210" y1="155" x2="320" y2="200" stroke="#22c55e" stroke-width="1" opacity=".2">
-        <animate attributeName="opacity" values=".1;.3;.1" dur="3s" begin="1s" repeatCount="indefinite"/>
-      </line>
-      <line x1="210" y1="155" x2="100" y2="210" stroke="#22c55e" stroke-width="1" opacity=".2">
-        <animate attributeName="opacity" values=".1;.28;.1" dur="4.5s" begin=".8s" repeatCount="indefinite"/>
-      </line>
-      <line x1="210" y1="155" x2="210" y2="50" stroke="#22c55e" stroke-width="1" opacity=".15">
-        <animate attributeName="opacity" values=".08;.25;.08" dur="5s" begin=".3s" repeatCount="indefinite"/>
-      </line>
-      <line x1="120" y1="100" x2="100" y2="210" stroke="#22c55e" stroke-width=".6" opacity=".12">
-        <animate attributeName="opacity" values=".06;.2;.06" dur="6s" begin="1.2s" repeatCount="indefinite"/>
-      </line>
-      <line x1="300" y1="100" x2="320" y2="200" stroke="#22c55e" stroke-width=".6" opacity=".12">
-        <animate attributeName="opacity" values=".06;.18;.06" dur="5.5s" begin="2s" repeatCount="indefinite"/>
-      </line>
-
-      <!-- nœud central (plus grand = hub) -->
-      <circle cx="210" cy="155" r="22" fill="#22c55e" opacity=".08"/>
-      <circle cx="210" cy="155" r="22" fill="none" stroke="#22c55e" stroke-width="1.2" opacity=".4">
-        <animate attributeName="r" values="22;32;22" dur="3s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values=".4;0;.4" dur="3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="210" cy="155" r="14" fill="#111" stroke="#22c55e" stroke-width="1.8" opacity=".9"/>
-      <text font-family="Georgia,serif" font-size="12" fill="#22c55e" x="210" y="160" text-anchor="middle" opacity=".9">€</text>
-
-      <!-- nœud haut gauche -->
-      <circle cx="120" cy="100" r="10" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".7">
-        <animate attributeName="opacity" values=".4;.9;.4" dur="4s" begin=".5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="120" cy="100" r="5" fill="#22c55e" opacity=".5"/>
-
-      <!-- nœud haut droit -->
-      <circle cx="300" cy="100" r="10" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".7">
-        <animate attributeName="opacity" values=".4;.85;.4" dur="3.5s" begin="1s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="300" cy="100" r="5" fill="#22c55e" opacity=".5"/>
-
-      <!-- nœud droite -->
-      <circle cx="320" cy="200" r="8" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".6">
-        <animate attributeName="opacity" values=".3;.8;.3" dur="5s" begin=".3s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="320" cy="200" r="4" fill="#22c55e" opacity=".45"/>
-
-      <!-- nœud gauche -->
-      <circle cx="100" cy="210" r="8" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".6">
-        <animate attributeName="opacity" values=".3;.75;.3" dur="4.2s" begin="1.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="100" cy="210" r="4" fill="#22c55e" opacity=".45"/>
-
-      <!-- nœud haut centre -->
-      <circle cx="210" cy="50" r="7" fill="#111" stroke="#22c55e" stroke-width="1" opacity=".55">
-        <animate attributeName="opacity" values=".3;.7;.3" dur="3.8s" begin=".7s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="210" cy="50" r="3" fill="#22c55e" opacity=".4"/>
-
-      <!-- nœuds secondaires plus petits -->
-      <circle cx="165" cy="65" r="5" fill="#111" stroke="#22c55e" stroke-width=".8" opacity=".4">
-        <animate attributeName="opacity" values=".2;.55;.2" dur="6s" begin="2s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="255" cy="68" r="5" fill="#111" stroke="#22c55e" stroke-width=".8" opacity=".4">
-        <animate attributeName="opacity" values=".2;.5;.2" dur="5.5s" begin="1.8s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="355" cy="150" r="5" fill="#111" stroke="#22c55e" stroke-width=".8" opacity=".35">
-        <animate attributeName="opacity" values=".15;.45;.15" dur="7s" begin=".9s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="68" cy="155" r="5" fill="#111" stroke="#22c55e" stroke-width=".8" opacity=".35">
-        <animate attributeName="opacity" values=".15;.42;.15" dur="6.5s" begin="2.5s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- ── PIÈCES QUI TOMBENT DOUCEMENT ── -->
-      <!-- Pièce 1 -->
-      <g style="animation:coin-fall-1 4s ease-in infinite;">
-        <ellipse cx="170" cy="30" rx="14" ry="14" fill="#111" stroke="#22c55e" stroke-width="1.5" opacity=".85"/>
-        <ellipse cx="170" cy="30" rx="10" ry="10" fill="none" stroke="#22c55e" stroke-width=".6" opacity=".4"/>
-        <text font-family="Georgia,serif" font-size="11" fill="#22c55e" x="170" y="34" text-anchor="middle">€</text>
-      </g>
-      <!-- Pièce 2 -->
-      <g style="animation:coin-fall-2 5.5s ease-in infinite;animation-delay:1.2s;">
-        <ellipse cx="260" cy="20" rx="11" ry="11" fill="#111" stroke="#22c55e" stroke-width="1.3" opacity=".75"/>
-        <text font-family="Georgia,serif" font-size="9" fill="#22c55e" x="260" y="24" text-anchor="middle">€</text>
-      </g>
-      <!-- Pièce 3 -->
-      <g style="animation:coin-fall-3 6s ease-in infinite;animation-delay:2.4s;">
-        <ellipse cx="310" cy="10" rx="9" ry="9" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".65"/>
-        <text font-family="Georgia,serif" font-size="8" fill="#22c55e" x="310" y="14" text-anchor="middle">€</text>
-      </g>
-      <!-- Pièce 4 -->
-      <g style="animation:coin-fall-1 7s ease-in infinite;animation-delay:3.5s;">
-        <ellipse cx="130" cy="15" rx="10" ry="10" fill="#111" stroke="#22c55e" stroke-width="1.2" opacity=".6"/>
-        <text font-family="Georgia,serif" font-size="8" fill="#22c55e" x="130" y="19" text-anchor="middle">€</text>
-      </g>
-      <!-- Pièce 5 -->
-      <g style="animation:coin-fall-2 4.8s ease-in infinite;animation-delay:.6s;">
-        <ellipse cx="340" cy="25" rx="12" ry="12" fill="#111" stroke="#22c55e" stroke-width="1.4" opacity=".7"/>
-        <text font-family="Georgia,serif" font-size="10" fill="#22c55e" x="340" y="29" text-anchor="middle">€</text>
-      </g>
-
-      <!-- ── FLÈCHE DE CROISSANCE (discrète) ── -->
-      <polyline points="60,260 90,240 130,245 165,220 200,215 240,195 275,185 310,165 350,145"
-        stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity=".3">
-        <animate attributeName="opacity" values=".15;.45;.15" dur="4s" repeatCount="indefinite"/>
-      </polyline>
-      <polygon points="350,145 340,153 344,141" fill="#22c55e" opacity=".35"/>
-
-      <!-- ── FOND : cercles concentriques très légers ── -->
-      <circle cx="210" cy="155" r="80" fill="none" stroke="#22c55e" stroke-width=".4" opacity=".06"/>
-      <circle cx="210" cy="155" r="130" fill="none" stroke="#22c55e" stroke-width=".4" opacity=".04"/>
-      <circle cx="210" cy="155" r="180" fill="none" stroke="#22c55e" stroke-width=".3" opacity=".03"/>
-
-    </svg>
-  </div>
-  <div class="pill"><span class="pill-dot"></span>Ouvert à tous — aucune expérience requise</div>
-  <h1 style="max-width:50%;">Vous mangez<br>dans des snacks.<br><em>Et si c'était<br>un revenu ?</em></h1>
-  <p class="hero-sub">Des gérants de fast-food perdent 30 % de chaque commande Uber Eats. SnackSolution règle ce problème. Votre rôle : faire le lien. En échange, vous êtes rémunéré sur chaque commande générée — chaque mois.</p>
-  <div class="hero-ctas">
-    <button class="btn btn-g" onclick="goTo('form-opp')">Je veux en savoir plus →</button>
-    <button class="btn btn-o" onclick="goTo('opp-how')">Comment ça marche ?</button>
-  </div>
-  <div class="opp-kpis">
-    <div class="opp-kpi"><div class="kpi-num">70 000</div><div class="kpi-label">fast-foods indépendants en France</div></div>
-    <div class="opp-kpi"><div class="kpi-num">30 %</div><div class="kpi-label">pris par Uber Eats sur chaque vente</div></div>
-    <div class="opp-kpi"><div class="kpi-num">+30</div><div class="kpi-label">restaurants déjà partenaires</div></div>
-    <div class="opp-kpi"><div class="kpi-num">0€</div><div class="kpi-label">pour démarrer</div></div>
-  </div>
-</div>
-
-<section class="bg-dark" id="opp-how">
-  <div class="s-tag">Pour qui ?</div>
-  <h2 class="s-title">Pas besoin d'être<br>dans la restauration.</h2>
-  <p class="s-sub">La seule chose qui compte : connaître — ou avoir envie de rencontrer — des gérants de snack. Le reste, on vous l'apprend.</p>
-  <div class="how-grid reveal">
-    <div>
-      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:28px;">
-        <div style="display:flex;align-items:center;gap:12px;background:var(--dark2);border-radius:9px;padding:13px 17px;border-left:3px solid var(--green);"><span style="font-size:1.1rem;flex-shrink:0;">🍕</span><span style="font-size:.86rem;">Un restaurateur qui connaît d'autres gérants</span></div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--dark2);border-radius:9px;padding:13px 17px;border-left:3px solid var(--green);"><span style="font-size:1.1rem;flex-shrink:0;">💼</span><span style="font-size:.86rem;">Un entrepreneur qui cherche un revenu régulier</span></div>
-        <div style="display:flex;align-items:center;gap:12px;background:var(--dark2);border-radius:9px;padding:13px 17px;border-left:3px solid var(--green);"><span style="font-size:1.1rem;flex-shrink:0;">🎓</span><span style="font-size:.86rem;">Un étudiant motivé qui veut apprendre le terrain</span></div>
-        <div style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(34,197,94,.09),var(--dark2));border-radius:9px;padding:13px 17px;border:1px solid rgba(34,197,94,.2);"><span style="font-size:1.1rem;flex-shrink:0;">🌍</span><span style="font-size:.86rem;">N'importe qui qui connaît un seul gérant de snack</span></div>
-      </div>
-      <div style="background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);border-radius:10px;padding:16px 20px;font-size:.84rem;color:var(--gray);line-height:1.65;font-weight:300;">En France, il y a plus de 70 000 fast-foods indépendants. Kebabs, tacos, pizzerias, burgers… Presque tous utilisent Uber Eats. Presque tous se plaignent des commissions. Et presque aucun n'a entendu parler d'une alternative. <strong style="color:var(--white);font-weight:500;">Vous êtes peut-être la première personne à leur en parler.</strong></div>
-    </div>
-    <div class="how-visual">
-      <div class="how-step"><div class="how-n">1</div><div><h4>Vous parlez de SnackSolution à un gérant</h4><p>Un kebab du quartier, une pizzeria que vous fréquentez, un fast-food d'un proche. Deux minutes suffisent.</p></div></div>
-      <div class="how-step"><div class="how-n">2</div><div><h4>SnackSolution s'occupe de tout</h4><p>Création, mise en ligne, optimisation. Vous n'avez rien de technique à gérer. Zéro.</p></div></div>
-      <div class="how-step"><div class="how-n">3</div><div><h4>Vous touchez une part chaque mois</h4><p>Tant que le restaurant génère des commandes, vous êtes rémunéré. Pas une prime unique — un revenu régulier.</p></div></div>
-      <div class="how-step"><div class="how-n">4</div><div><h4>Plus votre réseau grandit, plus vous gagnez</h4><p>Chaque nouveau restaurant que vous mettez en relation s'ajoute à votre revenu mensuel. Il n'y a pas de plafond.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="s-tag">Vos questions</div>
-  <h2 class="s-title">Les réponses<br>directes.</h2>
-  <p class="s-sub">Pas de jargon. Pas de promesses floues. Juste les faits.</p>
-  <div class="obj-grid reveal">
-    <div class="obj-card"><div class="obj-q">Est-ce que c'est légal ?</div><div class="obj-a">Complètement. C'est une mise en relation classique, utilisée dans des dizaines de secteurs. Les modalités exactes sont précisées lors de votre intégration.</div></div>
-    <div class="obj-card"><div class="obj-q">Est-ce qu'il faut payer pour démarrer ?</div><div class="obj-a">Non. Votre seul investissement, c'est du temps et de l'envie. Pas de frais d'entrée, pas d'abonnement.</div></div>
-    <div class="obj-card"><div class="obj-q">Je peux le faire en parallèle de mon travail ?</div><div class="obj-a">Oui, c'est fait pour ça. La plupart ont commencé à côté de leur activité principale. Certains en ont fait leur activité principale avec le temps.</div></div>
-    <div class="obj-card"><div class="obj-q">Qu'est-ce que je dis au gérant ?</div><div class="obj-a">On vous donne un script complet et testé. Vous n'improvisez pas — vous appliquez. Et ça tient en moins de 2 minutes.</div></div>
-    <div class="obj-card"><div class="obj-q">Et si je ne connais aucun gérant ?</div><div class="obj-a">On vous explique comment en rencontrer. C'est plus simple qu'il n'y paraît — un fast-food se visite en 5 minutes pendant les heures calmes.</div></div>
-    <div class="obj-card"><div class="obj-q">Combien de temps avant de gagner quelque chose ?</div><div class="obj-a">Ça dépend de votre zone et de votre rythme. Le temps investi est surtout au début — le revenu, lui, continue tant que le restaurant tourne.</div></div>
-  </div>
-</section>
-
-<section class="bg-dark" id="form-opp">
-  <div class="form-wrap">
-    <div>
-      <div class="s-tag">Passez à l'action</div>
-      <h2 class="s-title">Vous voulez<br>les détails ?</h2>
-      <p class="s-sub">Remplissez ce formulaire. On vous rappelle pour tout expliquer — les montants, le fonctionnement concret, vos questions. Sans engagement.</p>
-      <div class="form-aside">
-        <div class="aside-item"><div class="aside-ico">⚡</div><div><h4>Réponse sous 48 h</h4><p>Chaque demande est lue personnellement. Pas de réponse automatique.</p></div></div>
-        <div class="aside-item"><div class="aside-ico">🗺</div><div><h4>Places limitées par zone</h4><p>On travaille en exclusivité par secteur. Si votre ville est encore libre, on vous le confirme.</p></div></div>
-        <div class="aside-item"><div class="aside-ico">🔒</div><div><h4>Zéro engagement</h4><p>Vous demandez des infos. Vous décidez ensuite si ça vous convient.</p></div></div>
-      </div>
-    </div>
-    <div>
-      <form id="form-o" action="https://formspree.io/f/xwvrykjr" method="POST" onsubmit="handleForm(event,'form-o','success-o')">
-        <input type="hidden" name="_subject" value="Demande programme partenaire — SnackSolution">
-        <input type="hidden" name="type" value="demande-partenaire">
-        <div class="form-row">
-          <div><label>Prénom *</label><input type="text" name="prenom" placeholder="Votre prénom" required></div>
-          <div><label>Nom *</label><input type="text" name="nom" placeholder="Votre nom" required></div>
-        </div>
-        <div><label>Email *</label><input type="email" name="email" placeholder="votre@email.com" required></div>
-        <div><label>Téléphone *</label><input type="tel" name="telephone" placeholder="+33 6 00 00 00 00" required></div>
-        <div><label>Votre ville</label><input type="text" name="ville" placeholder="Paris, Lyon, Marseille..."></div>
-        <div><label>Vous connaissez des gérants de snack ?</label>
-          <select name="connaissance">
-            <option value="">Sélectionnez...</option>
-            <option>Oui, plusieurs</option>
-            <option>Oui, un ou deux</option>
-            <option>Pas encore, mais je suis motivé(e)</option>
-            <option>Je suis moi-même restaurateur(rice)</option>
-          </select>
-        </div>
-        <div><label>Ce qui vous attire dans ce projet</label><textarea name="motivation" placeholder="Quelques mots sur votre situation et vos questions..."></textarea></div>
-        <button type="submit" class="form-submit">Envoyer ma demande →</button>
-        <p class="form-legal">En envoyant ce formulaire, vous acceptez d'être recontacté par SnackSolution. Aucun engagement de votre part.</p>
-      </form>
-      <div class="form-success" id="success-o"><h3>✅ Demande reçue !</h3><p>On revient vers vous dans les 48 h avec tous les détails. À très vite.</p></div>
-    </div>
-  </div>
-</section>
-
-</div><!-- /page-opp -->
 
 
 
 <!-- ═══════════════════════════════════════ -->
 <!--           PAGE DISCOUNTMAX             -->
 <!-- ═══════════════════════════════════════ -->
-<div id="page-dm" class="page">
 
-<!-- HERO -->
-<div class="dm-hero" style="background:linear-gradient(135deg,#0d0d00 0%,#080808 60%,#0d0a00 100%);position:relative;overflow:hidden;">
-  <div class="dm-glow"></div><div class="dm-glow2"></div>
-
-  <!-- CADDIE ANIMÉ -->
-  <div class="cart-wrap">
-    <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" fill="none">
-
-      <!-- lueur derrière -->
-      <ellipse cx="210" cy="200" rx="160" ry="90" fill="#eab308" opacity=".05"/>
-
-      <!-- ombre au sol -->
-      <ellipse cx="215" cy="278" rx="100" ry="10" fill="#eab308" opacity=".08"/>
-
-      <!-- groupe principal qui se balance -->
-      <g style="transform-origin:210px 220px;animation:cart-roll 2s ease-in-out infinite;">
-
-        <!-- ── PRODUITS QUI DÉPASSENT DU CADDIE ── -->
-
-        <!-- Canette (Coca style) -->
-        <g style="transform-origin:155px 140px;animation:product-bounce-1 2s ease-in-out infinite;">
-          <rect x="140" y="110" width="30" height="52" rx="8" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
-          <rect x="140" y="118" width="30" height="28" rx="4" fill="#eab308" opacity=".15"/>
-          <rect x="144" y="122" width="22" height="3" rx="1.5" fill="#eab308" opacity=".6"/>
-          <rect x="144" y="128" width="16" height="2" rx="1" fill="#eab308" opacity=".4"/>
-          <ellipse cx="155" cy="113" rx="12" ry="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.2"/>
-          <rect x="152" y="108" width="6" height="5" rx="2" fill="#eab308" opacity=".7"/>
-        </g>
-
-        <!-- Paquet biscuits (Oreo style) -->
-        <g style="transform-origin:210px 125px;animation:product-bounce-2 2s ease-in-out infinite;animation-delay:.3s;">
-          <rect x="190" y="95" width="40" height="55" rx="6" fill="#111" stroke="#eab308" stroke-width="1.5"/>
-          <rect x="193" y="100" width="34" height="20" rx="3" fill="#eab308" opacity=".12"/>
-          <circle cx="210" cy="132" r="10" fill="#1a1a1a" stroke="#eab308" stroke-width="1"/>
-          <circle cx="210" cy="132" r="7" fill="none" stroke="#eab308" stroke-width=".8" opacity=".5"/>
-          <line x1="204" y1="132" x2="216" y2="132" stroke="#eab308" stroke-width=".8" opacity=".5"/>
-          <line x1="210" y1="126" x2="210" y2="138" stroke="#eab308" stroke-width=".8" opacity=".5"/>
-          <rect x="195" y="102" width="30" height="6" rx="2" fill="#eab308" opacity=".3"/>
-        </g>
-
-        <!-- Bouteille energy drink (Red Bull style) -->
-        <g style="transform-origin:263px 135px;animation:product-bounce-3 2s ease-in-out infinite;animation-delay:.6s;">
-          <rect x="250" y="100" width="26" height="60" rx="10" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
-          <rect x="253" y="108" width="20" height="30" rx="4" fill="#eab308" opacity=".1"/>
-          <path d="M253,120 L270,120" stroke="#eab308" stroke-width="1" opacity=".5"/>
-          <path d="M255,126 Q263,118 271,126" fill="#eab308" opacity=".4"/>
-          <ellipse cx="263" cy="102" rx="10" ry="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.2"/>
-        </g>
-
-        <!-- ── CADDIE ── -->
-        <!-- corps du caddie -->
-        <path d="M120,170 L130,240 L300,240 L310,170 Z" fill="#111" stroke="#eab308" stroke-width="2"/>
-        <!-- grille du caddie -->
-        <line x1="160" y1="170" x2="155" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <line x1="200" y1="170" x2="200" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <line x1="240" y1="170" x2="245" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <line x1="280" y1="170" x2="275" y2="240" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <line x1="122" y1="190" x2="308" y2="190" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <line x1="125" y1="210" x2="305" y2="210" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-        <!-- bord supérieur du caddie -->
-        <rect x="118" y="164" width="194" height="10" rx="5" fill="#1a1a1a" stroke="#eab308" stroke-width="1.8"/>
-        <!-- poignée -->
-        <rect x="295" y="148" width="8" height="28" rx="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
-        <rect x="285" y="144" width="28" height="8" rx="4" fill="#1a1a1a" stroke="#eab308" stroke-width="1.5"/>
-        <!-- bras support -->
-        <line x1="130" y1="240" x2="155" y2="265" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="300" y1="240" x2="275" y2="265" stroke="#eab308" stroke-width="2.5" stroke-linecap="round"/>
-
-        <!-- ── ROUES ── -->
-        <!-- roue gauche -->
-        <g transform="translate(155,270)">
-          <circle r="16" fill="#111" stroke="#eab308" stroke-width="1.8"/>
-          <circle r="10" fill="none" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-          <g style="transform-origin:0px 0px;animation:wheel-spin .6s linear infinite;">
-            <line x1="0" y1="-12" x2="0" y2="12" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
-            <line x1="-12" y1="0" x2="12" y2="0" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
-            <line x1="-8" y1="-8" x2="8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-            <line x1="8" y1="-8" x2="-8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-          </g>
-          <circle r="4" fill="#eab308" opacity=".8"/>
-        </g>
-        <!-- roue droite -->
-        <g transform="translate(275,270)">
-          <circle r="16" fill="#111" stroke="#eab308" stroke-width="1.8"/>
-          <circle r="10" fill="none" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-          <g style="transform-origin:0px 0px;animation:wheel-spin .6s linear infinite;">
-            <line x1="0" y1="-12" x2="0" y2="12" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
-            <line x1="-12" y1="0" x2="12" y2="0" stroke="#eab308" stroke-width="1.2" opacity=".5"/>
-            <line x1="-8" y1="-8" x2="8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-            <line x1="8" y1="-8" x2="-8" y2="8" stroke="#eab308" stroke-width=".8" opacity=".3"/>
-          </g>
-          <circle r="4" fill="#eab308" opacity=".8"/>
-        </g>
-
-      </g><!-- /cart-roll -->
-
-      <!-- ── BADGE -40% qui pulse ── -->
-      <g style="transform-origin:330px 80px;animation:price-tag 1.5s ease-in-out infinite;">
-        <rect x="295" y="55" width="80" height="46" rx="10" fill="#eab308"/>
-        <rect x="298" y="58" width="74" height="40" rx="8" fill="#eab308"/>
-        <text font-family="'Bebas Neue',Georgia,serif" font-size="28" font-weight="900" fill="#080808" x="335" y="86" text-anchor="middle">-40%</text>
-        <!-- petit triangle bas -->
-        <polygon points="325,101 345,101 335,112" fill="#eab308"/>
-      </g>
-
-      <!-- ── ÉTINCELLES / SPARKLES ── -->
-      <g style="animation:sparkle 2s ease-in-out infinite;transform-origin:90px 120px;">
-        <line x1="90" y1="110" x2="90" y2="100" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="90" y1="130" x2="90" y2="140" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="80" y1="120" x2="70" y2="120" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="100" y1="120" x2="110" y2="120" stroke="#eab308" stroke-width="1.5" stroke-linecap="round"/>
-      </g>
-      <g style="animation:sparkle 2.5s ease-in-out infinite;animation-delay:.8s;transform-origin:355px 200px;">
-        <line x1="355" y1="192" x2="355" y2="184" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-        <line x1="355" y1="208" x2="355" y2="216" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-        <line x1="347" y1="200" x2="339" y2="200" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-        <line x1="363" y1="200" x2="371" y2="200" stroke="#eab308" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
-      </g>
-      <g style="animation:sparkle 3s ease-in-out infinite;animation-delay:1.4s;transform-origin:75px 220px;">
-        <line x1="75" y1="213" x2="75" y2="207" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-        <line x1="75" y1="227" x2="75" y2="233" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-        <line x1="68" y1="220" x2="62" y2="220" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-        <line x1="82" y1="220" x2="88" y2="220" stroke="#eab308" stroke-width="1" stroke-linecap="round" opacity=".5"/>
-      </g>
-
-      <!-- pièces qui tombent (doré) -->
-      <g style="animation:coin-fall-1 3.5s ease-in infinite;">
-        <ellipse cx="80" cy="40" rx="13" ry="13" fill="#111" stroke="#eab308" stroke-width="1.5" opacity=".8"/>
-        <text font-family="Georgia,serif" font-size="11" fill="#eab308" x="80" y="44" text-anchor="middle">€</text>
-      </g>
-      <g style="animation:coin-fall-2 5s ease-in infinite;animation-delay:1s;">
-        <ellipse cx="360" cy="30" rx="10" ry="10" fill="#111" stroke="#eab308" stroke-width="1.3" opacity=".7"/>
-        <text font-family="Georgia,serif" font-size="9" fill="#eab308" x="360" y="34" text-anchor="middle">€</text>
-      </g>
-      <g style="animation:coin-fall-3 4.5s ease-in infinite;animation-delay:2s;">
-        <ellipse cx="200" cy="20" rx="11" ry="11" fill="#111" stroke="#eab308" stroke-width="1.4" opacity=".75"/>
-        <text font-family="Georgia,serif" font-size="10" fill="#eab308" x="200" y="24" text-anchor="middle">€</text>
-      </g>
-
-      <!-- sol -->
-      <line x1="60" y1="288" x2="380" y2="288" stroke="#eab308" stroke-width="1" opacity=".1"/>
-
-    </svg>
-  </div>
-  <div class="dm-pill"><span class="dm-pill-dot"></span>Indépendant de votre système de livraison</div>
-  <h1 class="dm-h1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,2.8vw,3rem);line-height:1.1;margin-bottom:20px;animation:up .7s .1s ease both;max-width:50%;">Ce que vous<br>achetez déjà.<br><em>-40%.</em><br>Sans intermédiaire.</h1>
-  <p class="hero-sub" style="animation:up .7s .2s ease both;">Coca-Cola, Red Bull, Oreo, emballages… Accédez directement aux prix usine, sans intermédiaire. Jusqu'à -40% sur vos achats du quotidien. Que vous soyez restaurateur, épicier ou gérant de snack.</p>
-  <div class="hero-ctas" style="animation:up .7s .3s ease both;">
-    <button class="btn-dm" onclick="goTo('dm-form')">Recevoir un devis gratuit →</button>
-    <button class="btn-o" onclick="goTo('dm-produits')">Voir les produits</button>
-  </div>
-  <div class="hero-kpis" style="border-top:1px solid rgba(234,179,8,.18);animation:up .7s .4s ease both;">
-    <div class="dm-kpi"><div class="kpi-num">-40%</div><div class="kpi-label">sur vos achats en moyenne</div></div>
-    <div class="dm-kpi"><div class="kpi-num">2 000+</div><div class="kpi-label">références disponibles</div></div>
-    <div class="dm-kpi"><div class="kpi-num">10-15j</div><div class="kpi-label">livraison directe chez vous</div></div>
-    <div class="dm-kpi"><div class="kpi-num">0€</div><div class="kpi-label">de frais de dossier</div></div>
-  </div>
-</div>
-
-<!-- PRODUITS -->
-<section class="bg-dark" id="dm-produits">
-  <div class="dm-tag">Ce qu'on propose</div>
-  <h2 class="s-title">Les produits que vous<br>achetez déjà… moins chers.</h2>
-  <p class="s-sub">Mêmes marques. Mêmes produits. Qualité 100% identique. Prix usine.</p>
-  <div class="dm-prod-grid reveal">
-    <div class="dm-prod"><div class="dm-prod-ico">🥤</div><h4>Coca-Cola</h4><p>Canettes &amp; bouteilles</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">⚡</div><h4>Red Bull</h4><p>Energy drinks</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">🍪</div><h4>Oreo</h4><p>Biscuits &amp; snacks</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">🍫</div><h4>Nutella</h4><p>Pâte à tartiner</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">🍝</div><h4>Barilla</h4><p>Pâtes &amp; sauces</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">📦</div><h4>Emballages</h4><p>Sacs, boîtes, contenants</p></div>
-    <div class="dm-prod"><div class="dm-prod-ico">🧹</div><h4>Hygiène</h4><p>Produits d'entretien</p></div>
-    <div class="dm-prod" style="border-color:rgba(234,179,8,.3);background:linear-gradient(135deg,rgba(234,179,8,.07),var(--dark2));"><div class="dm-prod-ico">➕</div><h4>Et bien plus</h4><p>+2 000 références</p></div>
-  </div>
-  <div style="text-align:center;margin-top:32px;">
-    <div style="display:inline-block;background:rgba(234,179,8,.08);border:1px solid rgba(234,179,8,.2);border-radius:10px;padding:14px 28px;font-size:.86rem;color:var(--gray);line-height:1.6;">Produits officiels · Qualité garantie · Stock permanent · Import direct Europe (Pologne, Roumanie, Espagne…)</div>
-  </div>
-</section>
-
-<!-- POURQUOI MOINS CHER -->
-<section>
-  <div class="dm-tag">Le circuit court</div>
-  <h2 class="s-title">Pourquoi vous payez<br>trop cher aujourd'hui.</h2>
-  <p class="s-sub">Entre l'usine et votre restaurant, il y a en général 2 à 3 intermédiaires. Chacun prend sa marge. Vous payez tout ça.</p>
-  <div class="dm-flow reveal">
-    <div class="dm-flow-step"><div class="dm-flow-ico">🏭</div><div class="dm-flow-t">Usine</div><div class="dm-flow-s">Prix de base</div></div>
-    <div class="dm-flow-arrow">+30% →</div>
-    <div class="dm-flow-step"><div class="dm-flow-ico">🏬</div><div class="dm-flow-t">Grossiste</div><div class="dm-flow-s">+25% encore</div></div>
-    <div class="dm-flow-arrow">+25% →</div>
-    <div class="dm-flow-step" style="background:rgba(234,179,8,.07);"><div class="dm-flow-ico">😓</div><div class="dm-flow-t">Vous</div><div class="dm-flow-s hot">Prix final +75%</div></div>
-  </div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;" class="reveal">
-    <div style="background:linear-gradient(135deg,rgba(234,179,8,.08),var(--dark2));border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;">
-      <div style="font-size:1.4rem;flex-shrink:0;">✂️</div>
-      <div><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.92rem;margin-bottom:6px;">Notre modèle : direct usine → vous</div><div style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">On supprime les intermédiaires. Vous achetez au prix fabricant. C'est aussi simple que ça.</div></div>
-    </div>
-    <div style="background:linear-gradient(135deg,rgba(234,179,8,.08),var(--dark2));border:1px solid rgba(234,179,8,.2);border-radius:12px;padding:22px 24px;display:flex;gap:16px;align-items:flex-start;">
-      <div style="font-size:1.4rem;flex-shrink:0;">💰</div>
-      <div><div style="font-family:'Syne',sans-serif;font-weight:800;font-size:.92rem;margin-bottom:6px;">Jusqu'à -40% sur chaque commande</div><div style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Sur 2 500€ d'achats mensuels, c'est jusqu'à 1 000€ d'économies. Chaque mois.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONDITIONS -->
-<section class="bg-dark">
-  <div class="dm-tag">Conditions</div>
-  <h2 class="s-title">Simple, rapide,<br>rentable.</h2>
-  <p class="s-sub">Pas de contrat compliqué. Pas d'abonnement. Vous commandez quand vous en avez besoin.</p>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;" class="reveal">
-    <div class="dm-card star"><div style="font-size:1.4rem;margin-bottom:12px;">💶</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Minimum de commande</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">2 500€ HT par commande (hors livraison). Idéal pour les restaurants, épiceries et supérettes.</p></div>
-    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">🚚</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Livraison 10 à 15 jours</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Directement chez vous, depuis nos entrepôts européens. Livraison directe usine → client.</p></div>
-    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">💳</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Paiement flexible</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">1ère commande comptant. Les suivantes en 3x ou 4x. Pour gérer votre trésorerie sereinement.</p></div>
-    <div class="dm-card"><div style="font-size:1.4rem;margin-bottom:12px;">✅</div><h3 style="font-family:'Syne',sans-serif;font-weight:800;font-size:.95rem;margin-bottom:8px;">Qualité garantie</h3><p style="font-size:.82rem;color:var(--gray);line-height:1.6;font-weight:300;">Produits officiels, 100% authentiques. Mêmes références que chez votre grossiste habituel.</p></div>
-  </div>
-</section>
-
-<!-- FORMULAIRE -->
-<section id="dm-form">
-  <div class="form-wrap">
-    <div>
-      <div class="dm-tag">Demande de devis</div>
-      <h2 class="s-title">Un devis gratuit<br>sous 48 h.</h2>
-      <p class="s-sub" style="max-width:360px;">Dites-nous ce que vous achetez habituellement et en quelle quantité. On vous envoie une comparaison de prix et un devis sans engagement.</p>
-      <div class="form-aside">
-        <div class="aside-item"><div class="aside-ico">📊</div><div><h4>Comparaison de prix incluse</h4><p>On vous montre exactement ce que vous économisez par rapport à vos prix actuels.</p></div></div>
-        <div class="aside-item"><div class="aside-ico">🔓</div><div><h4>Aucun engagement</h4><p>Un devis, c'est juste un devis. Vous décidez ensuite librement.</p></div></div>
-        <div class="aside-item"><div class="aside-ico">🌍</div><div><h4>Ouvert à tous</h4><p>Restaurant, épicerie, supérette, snack — peu importe votre activité.</p></div></div>
-      </div>
-    </div>
-    <div>
-      <form id="form-dm" action="https://formspree.io/f/xwvrykjr" method="POST" onsubmit="handleForm(event,'form-dm','success-dm')">
-        <input type="hidden" name="_subject" value="Demande devis DiscountMax">
-        <input type="hidden" name="type" value="discountmax">
-        <div class="form-row">
-          <div><label>Prénom *</label><input type="text" name="prenom" placeholder="Ahmed" required></div>
-          <div><label>Nom *</label><input type="text" name="nom" placeholder="Benali" required></div>
-        </div>
-        <div><label>Email *</label><input type="email" name="email" placeholder="votre@email.com" required></div>
-        <div><label>Téléphone</label><input type="tel" name="telephone" placeholder="+33 6 00 00 00 00"></div>
-        <div><label>Vous êtes</label>
-          <select name="profil">
-            <option value="">Sélectionnez...</option>
-            <option>Restaurateur / Snack</option>
-            <option>Épicerie / Supérette</option>
-            <option>Autre commerce alimentaire</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div><label>Produits qui vous intéressent</label><textarea name="produits" placeholder="Ex : canettes Coca, emballages, Oreo, Red Bull… et vos volumes approximatifs"></textarea></div>
-        <button type="submit" class="form-submit" style="background:#eab308;color:#000;">Recevoir mon devis gratuit →</button>
-        <p class="form-legal">Vous acceptez d'être recontacté par DiscountMax sous 48 h. Aucun engagement.</p>
-      </form>
-      <div class="form-success" id="success-dm" style="border-color:rgba(234,179,8,.3);background:rgba(234,179,8,.08);"><h3>✅ Demande reçue !</h3><p>On vous envoie votre comparaison de prix sous 48 h. À très vite.</p></div>
-    </div>
-  </div>
-</section>
-
-</div><!-- /page-dm -->
 
 <footer>
   <div style="font-size:1rem;margin-bottom:9px;">⭐⭐⭐⭐⭐</div>
@@ -1106,8 +612,7 @@ function show(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('on'));
   document.getElementById('page-'+id).classList.add('on');
-  const idx = id==='resto'?0:id==='opp'?1:2;
-  document.querySelectorAll('.tab-btn')[idx].classList.add('on');
+  document.querySelectorAll('.tab-btn')[0].classList.add('on');
   window.scrollTo({top:0,behavior:'smooth'});
   setTimeout(observe,100);
 }
