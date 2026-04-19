@@ -257,34 +257,88 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 .revealed{opacity:1;transform:translateY(0);}
 
 /* RESPONSIVE */
+/* ═══════════════════════════════════════
+   RESPONSIVE — TOUS ÉCRANS MOBILES
+   ═══════════════════════════════════════ */
+
+/* Tablette large */
 @media(max-width:1000px){
   .steps-row{grid-template-columns:repeat(2,1fr);}
-  .acr-grid{grid-template-columns:1fr;}
-  .acr-card:nth-child(2){border-left:none;border-right:none;border-top:1px solid rgba(34,197,94,.22);border-bottom:1px solid rgba(34,197,94,.22);}
-  .close-grid{grid-template-columns:1fr 1fr;}
-  .check-grid{grid-template-columns:1fr;}
   .price-wrap{grid-template-columns:1fr;}
   .form-wrap{grid-template-columns:1fr;}
   .how-grid{grid-template-columns:1fr;}
+  .g2{grid-template-columns:1fr;}
+  .g4{grid-template-columns:repeat(2,1fr);}
 }
 
-@media(max-width:480px){
-  nav{padding:10px 3vw;flex-wrap:wrap;gap:8px;}
-  .logo{font-size:1.35rem;}
-  .nav-tabs{max-width:100%;width:100%;}
-  .tab-btn{padding:6px 10px;font-size:.7rem;flex:1;text-align:center;}
-  .vbadge{display:none;}
+/* Tablette / grand mobile */
+@media(max-width:768px){
+  section{padding:56px 5vw;}
+  .hero{padding:90px 5vw 56px;}
+  .hero h1{max-width:100%;font-size:clamp(1.8rem,6vw,3rem);}
+  .hero-sub{max-width:100%;font-size:.95rem;}
+  .hero-kpis{gap:16px;flex-wrap:wrap;}
+  .kpi-num{font-size:1.8rem;}
+  .steps-row{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .fw{grid-template-columns:1fr;}
+  /* Sections inline à 2 colonnes → 1 colonne */
+  .g2{grid-template-columns:1fr;}
+  .g4{grid-template-columns:repeat(2,1fr);}
+  /* Comparatif commission — empile sur mobile */
+  .commission-grid{grid-template-columns:1fr !important;}
+  /* Section stratégie — grille 2 col → 1 col */
+  .strat-grid{grid-template-columns:1fr !important;}
 }
+
+/* Mobile standard (iPhone, Samsung, etc.) */
+@media(max-width:480px){
+  /* Nav */
+  nav{padding:10px 4vw;flex-wrap:wrap;gap:6px;}
+  .logo{font-size:1.3rem;}
+  .logo svg{width:24px !important;height:16px !important;}
+  .nav-tabs{max-width:100%;width:100%;overflow-x:auto;}
+  .tab-btn{padding:7px 10px;font-size:.72rem;flex:1;text-align:center;white-space:nowrap;}
+  .vbadge{display:none;}
+  /* Hero */
+  .hero{padding:80px 4vw 48px;}
+  .hero h1{font-size:clamp(1.6rem,7vw,2.6rem);line-height:1.1;}
+  .hero-sub{font-size:.9rem;}
+  .hero-kpis{gap:12px;}
+  .kpi-num{font-size:1.6rem;}
+  .kpi-label{font-size:.68rem;}
+  /* Sections */
+  section{padding:48px 4vw;}
+  .s-title{font-size:clamp(1.6rem,6vw,2.4rem);}
+  .s-sub{font-size:.88rem;}
+  /* Steps */
+  .steps-row{grid-template-columns:1fr;}
+  .step-card{padding:20px 16px;}
+  /* Grilles */
+  .g2{grid-template-columns:1fr;}
+  .g4{grid-template-columns:1fr;}
+  .sol-grid{grid-template-columns:1fr;}
+  .gar-grid{grid-template-columns:1fr;}
+  .res-grid{grid-template-columns:1fr;}
+  /* Formulaire */
+  .form-wrap{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  /* KPIs hero */
+  .hero-kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-top:20px;margin-top:20px;}
+  /* Inline grids dans sections */
+  [style*="grid-template-columns:1fr 1fr"]{display:block !important;}
+  [style*="grid-template-columns:1fr auto 1fr"]{display:block !important;}
+  /* Prix comparatif */
+  .price-wrap{grid-template-columns:1fr;}
+  /* Form aside */
+  .form-aside{margin-top:20px;}
+}
+
+/* Très petit mobile (iPhone SE, etc.) */
 @media(max-width:360px){
   .tab-btn{font-size:.65rem;padding:5px 7px;}
-}
-@media(max-width:680px){
-  .close-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .steps-row{grid-template-columns:1fr;}
-  .opp-kpis{grid-template-columns:repeat(2,1fr);}
-  .hero-kpis{gap:24px;}
-  .tab-btn{padding:7px 13px;font-size:.72rem;}
+  .hero h1{font-size:1.5rem;}
+  section{padding:40px 4vw;}
 }
 </style>
 </head>
@@ -427,7 +481,7 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
   <h2 class="s-title">Sur une commande à 20€,<br>vous gardez <em style="color:var(--green);font-style:normal;">4€ de plus.</em></h2>
   <p class="s-sub">Concrètement, voici ce que ça change pour votre restaurant :</p>
 
-  <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:40px;" class="reveal">
+  <div class="commission-grid reveal" style="display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin-bottom:40px;">
 
     <!-- Uber Eats classique -->
     <div style="background:var(--dark2);border:1px solid rgba(239,68,68,.25);border-radius:14px;padding:28px 24px;">
@@ -538,7 +592,7 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
 
 <!-- SECTION : PAS ENCORE SUR UBER EATS ? -->
 <section>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="reveal">
+  <div class="g2 reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
     <div>
       <div class="stag">Pas encore sur Uber Eats ?</div>
       <h2 class="s-title">C'est peut-être<br>la meilleure nouvelle<br>de la journée.</h2>
@@ -660,7 +714,7 @@ footer p{color:var(--gray);font-size:.78rem;font-weight:300;}
   <h2 class="s-title">Simple, transparent,<br>et toujours gratuit.</h2>
   <p class="s-sub">Le service est gratuit. On se rémunère uniquement sur les nouvelles commandes générées via notre système — celles que vous recevez en plus, avec des frais Uber Eats bien inférieurs à d'habitude.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;" class="reveal">
+  <div class="g2 reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;">
 
     <!-- Bloc GRATUIT -->
     <div style="background:linear-gradient(135deg,rgba(34,197,94,.1),#1e1e1e);border:2px solid rgba(34,197,94,.4);border-radius:16px;padding:36px 30px;">
